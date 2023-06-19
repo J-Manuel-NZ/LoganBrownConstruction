@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    /* NAVBAR STYLES */
+    .navbar {
+        @apply flex justify-between relative
+    }
+    .navbar img {
+        @apply h-12 w-auto
+    }
+    .navbar-icon {
+        @apply h-10 w-10 text-whiteBlue right-3 absolute z-20
+    }
+
+    .navbar-menu {
+        @apply flex flex-col h-screen bg-darkBlue bg-opacity-95 w-full
+         z-10 absolute
+         items-center justify-start gap-5 pt-12
+    }
+    .navbar-menu_item {
+        @apply text-whiteBlue font-serif text-4xl tracking-widest
+    }
+    
+    .navbar-menu_item-active {
+        @apply text-accentGreen
+    }
+}
