@@ -4,21 +4,30 @@
 @tailwind utilities;
 
 @layer components {
+    /* MISC. STYLES */
+    .light_button {
+        @apply bg-whiteBlue text-darkBlue font-serif rounded-md
+        shadow-md p-2 px-3 text-xl font-bold tracking-tight
+    }
+    .dark_button {
+        @apply bg-darkBlue text-accentGreen font-serif rounded-md
+        shadow-md p-2 px-3 text-xl font-light tracking-tight
+    }
     /* NAVBAR STYLES */
     .navbar {
-        @apply flex justify-between relative
+        @apply flex justify-between relative items-start
     }
     .navbar img {
-        @apply h-12 w-auto
+        @apply h-12 w-auto z-10 mt-6 ml-6
     }
     .navbar-icon {
-        @apply h-10 w-10 text-whiteBlue right-3 absolute z-20
+        @apply h-10 w-10 text-whiteBlue right-3 absolute z-20 mt-6 mr-6
     }
 
     .navbar-menu {
-        @apply flex flex-col h-screen bg-darkBlue bg-opacity-95 w-full
+        @apply flex flex-col h-[100vh] bg-darkBlue bg-opacity-95 w-full
          z-10 absolute
-         items-center justify-start gap-5 pt-12
+         items-center justify-start gap-5 pt-16
     }
     .navbar-menu_item {
         @apply text-whiteBlue font-serif text-4xl tracking-widest
@@ -27,4 +36,28 @@
     .navbar-menu_item-active {
         @apply text-accentGreen
     }
+
+    /* HERO SECTION STYLES */
+
+    .hero-section {
+        @apply relative h-screen bg-no-repeat left-0 -mt-20 bg-hero_image bg-cover
+    }
+    .hero-section_content {
+        @apply absolute bottom-6 p-12
+    } 
+    .hero-section_content h1,
+    .hero-section_content h2 {
+        @apply font-serif text-darkBlue
+    }
+
+    .hero-section_content h1 {
+        @apply text-4xl font-extrabold tracking-tighter leading-none w-2/3
+    }
+    .hero-section_content h2 {
+        @apply text-xl font-bold leading-none mt-3
+    }
+    .hero-section_buttons {
+        @apply flex gap-4 mt-6
+    }
+
 }

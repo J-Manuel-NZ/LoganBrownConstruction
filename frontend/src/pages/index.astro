@@ -1,6 +1,7 @@
 ---
 import './index.css'
 import Navbar from '../components/navbar.jsx'
+import hero_image from '../../public/assets/hero_img.png'
 ---
 
 <html lang="en">
@@ -11,9 +12,20 @@ import Navbar from '../components/navbar.jsx'
 		<meta name="generator" content={Astro.generator} />
 		<title>Logan Brown Construction</title>
 	</head>
-	<body class="bg-darkBlue p-6 flex flex-col">
+	<body class="bg-darkBlue flex flex-col">
+		<!-- Navbar -->
 		<Navbar client:load />
-		<div>Hero section - Astro Hard Code</div>
+		<!-- Hero Section -->
+		<section class="hero-section">
+			<div class="hero-section_content">
+				<h1>Make your dream home a reality.</h1>
+				<h2>Friendly and professional build specialists based in Christchurch</h2>
+				<div class="hero-section_buttons">
+					<button class="light_button">Our Services</button>
+					<button class="dark_button">Get in Touch</button>
+				</div>
+			</div>
+		</section>
 		<div>Testimonial - React Component</div>
 		<div>Slider - React Component</div>
 		<div>Services - Astro Hard Code</div>

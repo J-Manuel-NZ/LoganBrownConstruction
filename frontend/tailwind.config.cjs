@@ -11,6 +11,9 @@ module.exports = {
 			darkBlue: '#161D27',
 			whiteBlue: '#E8F1F2',
 			accentGreen: '#22FF00'
+		},
+		backgroundImage: {
+			'hero_image' : "url('/public/assets/hero_img.png')"
 		}
 	},
 	plugins: [],
