@@ -7,6 +7,12 @@
 
 @layer components {
     /* MISC. STYLES */
+    .slider {
+        @apply min-h-[350px] max-h-[450px] relative
+    }
+    .slide img {
+        @apply object-cover  
+    }
     .light_button {
         @apply bg-whiteBlue text-darkBlue font-serif rounded-md
         shadow-md p-2 px-3 text-xl font-bold tracking-tight
@@ -22,6 +28,9 @@
     .section-title-light  {
         @apply flex items-center justify-center p-1 text-darkBlue bg-whiteBlue 
         font-serif text-[40px]
+    }
+    .line {
+        @apply h-[1px] bg-whiteBlue w-full my-3
     }
     /* NAVBAR STYLES */
     .navbar {

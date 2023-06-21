@@ -2,6 +2,19 @@
 import './index.css'
 import Footer from '../components/footer.astro';
 import Navbar from '../components/navbar';
+import ImageSlider from '../components/ImageSlider.jsx'
+import Testimonial from '../components/testimonial.jsx'
+// These will become null and void once the logic is implemented below
+import image1 from '../../public/assets/hero_img.png'
+import image2 from '../../public/assets/secondary_img.png'
+ // Change this to accept an array of objects as a prop in order to construct the slideshow
+    // The idea is to use this component as a base to construct ALL slideshows by 
+    // passing the images as a prop when needed
+const images = [
+        {image: '../../public/assets/hero_img.png', alt: 'picture 1'},
+        {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
+];
+console.log(images)
 ---
 
 <html lang="en">
@@ -13,28 +26,42 @@ import Navbar from '../components/navbar';
 		<title>Logan Brown Construction | Renovations</title>
 	</head>
 	<body class="bg-darkBlue flex flex-col">
-        <Navbar />
+        <Navbar client:load />
 		<div class="section-title-light">
 			<h1>Renovations</h1>
 		</div>
-		<h3>No Job Too Big or Small</h3>
-		<p>
-			Logan Brown Construction specializes in transforming existing spaces into stunning, functional, and personalized areas through our professional renovation services. Whether you are looking to revitalize a single room or renovate your entire home or business, our team of skilled contractors is committed to bringing your renovation vision to life.
-		</p>
-		<h2>We Specialise in:</h2>
-		<ul>
-			<li>Kitchen and bathroom renovations</li>
-			<li>Basement finishing and remodeling</li>
-			<li>Room additions and expansions</li>
-			<li>Flooring installation and refinishing</li>
-			<li>Custom cabinetry and built-in solutions</li>
-			<li>Painting and wallpapering</li>
-			<li>Electrical and plumbing updates</li>
-			<li>Window and door replacements</li>
-			<li>Structural repairs and reinforcements</li>
-			<li>Energy-efficient upgrades</li>
-			<li>Accessibility modifications</li>
-		</ul>
+		<section class="p-6 flex flex-col items-center">
+			<h3>No Job Too Big or Small</h3>
+			<p>
+				Logan Brown Construction specializes in transforming existing spaces into stunning, functional, and personalized areas through our professional renovation services. Whether you are looking to revitalize a single room or renovate your entire home or business, our team of skilled contractors is committed to bringing your renovation vision to life.
+			</p>
+			<h2>We Specialise in:</h2>
+			<ul>
+				<li>Kitchen and bathroom renovations</li>
+				<li>Basement finishing and remodeling</li>
+				<li>Room additions and expansions</li>
+				<li>Flooring installation and refinishing</li>
+				<li>Custom cabinetry and built-in solutions</li>
+				<li>Painting and wallpapering</li>
+				<li>Electrical and plumbing updates</li>
+				<li>Window and door replacements</li>
+				<li>Structural repairs and reinforcements</li>
+				<li>Energy-efficient upgrades</li>
+				<li>Accessibility modifications</li>
+			</ul>
+		</section>
+				<ImageSlider client:load images={images} />
+			<!-- <Testimonial client:load /> -->
+			<section>
+
+				<p>With our attention to detail and commitment to quality craftsmanship, we ensure that every aspect of your renovation project is executed to perfection. Our experienced team works closely with you to understand your goals, preferences, and budget, creating a customized plan that meets your specific needs. From concept development to the final touches, we guide you through the entire renovation process, providing expert advice and seamless project management.
+					At Logan Brown Construction, we understand that a successful renovation requires a balance of aesthetics, functionality, and efficient use of space. Whether you seek a modern, contemporary, or traditional design, we have the expertise to create a space that reflects your style and enhances your daily life. Trust us to transform your existing property into a renewed and captivating environment that exceeds your expectations. Get in touch today to start your new project!
+				</p>
+			</section>
+			<button class="light_button">Get In Touch</button>
+			<div class="line"></div>
+
+		
 
         <Footer />
     </body>
