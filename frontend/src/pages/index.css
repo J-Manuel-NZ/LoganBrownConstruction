@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +14,14 @@
     .dark_button {
         @apply bg-darkBlue text-accentGreen font-serif rounded-md
         shadow-md p-2 px-3 text-xl font-light tracking-tight
+    }
+    .section-title  {
+        @apply flex items-center justify-center p-1 text-whiteBlue 
+        font-serif text-[40px]
+    }
+    .section-title-light  {
+        @apply flex items-center justify-center p-1 text-darkBlue bg-whiteBlue 
+        font-serif text-[40px]
     }
     /* NAVBAR STYLES */
     .navbar {
@@ -71,6 +80,122 @@
     .testimonial-name {
         @apply text-whiteBlue text-sm mx-20 my-3 mb-9 font-sans 
         font-normal text-end      
+    }
+
+    /* SERVICES SECTION */
+
+    .services {
+        @apply flex flex-col justify-center items-center
+    }
+
+    .services-infoblock {
+        @apply flex flex-col items-center justify-center px-16 p-3 text-justify
+    }
+
+    .services-infoblock h3 {
+        @apply font-semibold text-xl tracking-wider
+        my-2
+    }
+    .services-infoblock p {
+        @apply text-xs font-medium leading-tight
+    }
+
+    .services-infoblock_icon {
+        @apply text-darkBlue h-14 w-14
+    }
+
+    /* CONTACT SECTION STYLES */
+
+    .contact {
+        @apply my-9 px-10 font-serif text-whiteBlue flex flex-col items-center text-center justify-center
+    }
+
+    .contact h2 {
+        @apply text-xl leading-tight tracking-tight font-semibold font-serif
+    }
+    .contact a {
+        @apply text-[40px] text-accentGreen tracking-tight font-semibold font-numbers
+    }
+    .contact p,
+    .contact p a {
+        @apply text-xs tracking-tight font-semibold font-serif text-whiteBlue
+    }
+
+    /* RECENT PROJECT SECTION STYLES */
+    .projects {
+        @apply bg-whiteBlue p-6
+    }
+    .projects-container h3 {
+        @apply text-darkBlue font-serif text-5xl   
+    }
+
+    /* ABOUT SECTION STYLES */
+    .about {
+        @apply p-6 pt-9 flex flex-col items-start 
+    }
+
+    .about-title {
+        @apply mb-2
+    }
+    .about-title h2 {
+        @apply font-serif text-whiteBlue text-[40px] tracking-tight
+        clear-right
+        leading-none
+    }
+    .about-title h3 {
+        @apply font-sans mt-1 text-whiteBlue opacity-50 text-[9px] tracking-wider
+    }
+    .about-content {
+        @apply flex items-center
+    }
+    .about-content p {
+        @apply font-sans text-whiteBlue text-xs tracking-wider
+        w-3/5 leading-4 font-light
+    }
+    .about img {
+        @apply aspect-square h-auto items-center w-2/5
+    }
+    /* FOOTER STYLES */
+
+    .footer {
+        @apply p-6 flex flex-col
+        gap-3
+    }
+
+    .footer-links  {
+        @apply flex flex-col gap-3 text-whiteBlue 
+    }
+    .footer-links img {
+        @apply w-3/5 mb-3 
+    }
+    .footer-links h3 {
+        @apply font-sans text-base tracking-wider font-semibold mb-1
+    }
+    .footer-links_contact {
+        @apply mb-3
+    }
+    .footer-links_contact li:first-of-type {
+        @apply text-base font-numbers underline
+    }
+    .footer-links_contact li {
+        @apply text-xs font-serif flex items-center gap-3
+    }
+    .footer-icon {
+        @apply h-6
+    }
+
+    .footer-links_social {
+        @apply flex flex-col
+    }
+    .footer-links_social ul {
+        @apply flex gap-3
+    }
+    .footer-social_icon {
+        @apply h-9
+    }
+
+    .footer-legal {
+        @apply text-whiteBlue font-serif text-[10px] tracking-tight mt-2 font-extralight
     }
 
 }

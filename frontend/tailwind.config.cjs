@@ -6,6 +6,7 @@ module.exports = {
 		fontFamily:{
 			sans: ["Raleway", "sans-serif" ],
 			serif: ["Playfair", "serif"],
+			numbers: ["Montserrat", "sans-serif"]
 		},
 		colors: {
 			darkBlue: '#161D27',

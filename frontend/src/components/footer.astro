@@ -1,0 +1,51 @@
+---
+import '../pages/index.css'
+import logo from '../../public/assets/lbc_logo.jpg'
+import {Icon} from 'astro-icon'
+---
+
+<section class="footer">
+    <div class="footer-links">
+        <img src={logo} alt="Logan Brown Construction Logo" />
+        <div class="footer-links_contact">
+            <h3>Contact Us</h3>
+            <ul>
+                <li class="footer-links_contact-item font-numbers text-base">
+                    <!-- Icon -->
+                    <Icon name="mdi:phone" class="footer-icon" />
+                    <a href="tel:+64278166962">027 816 6962</a> 
+                </li>   
+
+                <li class="footer-links_contact-item">
+                    <!-- Icon -->
+                    <Icon name="mdi:email" class="footer-icon"/>
+                    <a href="mailto:logan@loganbrownconstruction.co.nz">logan@loganbrownconstruction.co.nz</a> 
+                </li>  
+
+                <li class="footer-links_contact-item">
+                    <!-- Icon -->
+                    <Icon name="mdi:map-marker" class="footer-icon" />
+                    <p>Burwood, Christchurch</p> 
+                </li>
+            </ul>
+            
+        </div>
+        <div class="footer-links_social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li>
+                    <Icon name="mdi:facebook" class="footer-social_icon" />
+                </li>
+                <li>
+                    <Icon name="mdi:instagram" class="footer-social_icon" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-legal">
+        <p>&copy; 2023</p>
+        <a>Privacy Policy</a>
+        <p>Website built by <a>Justin Manuel Design</a></p>
+    </div>
+    
+</section>

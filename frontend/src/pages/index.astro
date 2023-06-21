@@ -2,7 +2,10 @@
 import './index.css'
 import Navbar from '../components/navbar.jsx'
 import Testimonial from '../components/testimonial.jsx'
-
+import buildingImage from '../../public/assets/secondary_img.png'
+import Footer from '../components/footer.astro'
+import { Icon } from 'astro-icon'
+import profileImage from '../../public/assets/logan_brown_headshot.png'
 ---
 
 <html lang="en">
@@ -29,12 +32,63 @@ import Testimonial from '../components/testimonial.jsx'
 		</section>
 		<!-- Testimonial Section -->
 		<Testimonial client:load />
-		<div>Testimonial - React Component</div>
-		<div>Slider - React Component</div>
-		<div>Services - Astro Hard Code</div>
-		<div>Call Today - Astro Hard Code</div>
-		<div>Project Section - React Component</div>
-		<div>Logan Picture - Astro Hard Code</div>
-		<div>Footer - Astro Component</div>		
+		<!-- Image or Slider of previous work -->
+		<img class="mt-9" src={buildingImage} alt="Finished high-end home by Logan Brown Construction">
+		<!-- Services Section -->
+		<section class="services">
+			<div class="section-title">
+				<h2>Our Services</h2>
+			</div>
+			<div class="bg-whiteBlue shaddow-inner py-6">
+				<div class="services-infoblock">
+					<!-- Icon -->
+					<Icon name="mdi:pencil-ruler" class="services-infoblock_icon" />
+					<h3>Design & Build</h3>
+					<p>Turn your dreams into reality with our expert team. From design to finishing touches, we deliver quality craftsmanship and attention to detail. Let us build your custom home, tailored to your style and needs.</p>
+				</div>
+				<div class="services-infoblock">
+					<!-- Icon -->
+					<Icon name="jam:hammer" class="services-infoblock_icon" />
+					<h3>Renovations</h3>
+					<p>Transform your space with our professional renovation services. We bring creativity and expertise to every project, updating single rooms or your entire property. Experience a functional, stylish, and inviting home.</p>
+				</div>
+				<div class="services-infoblock">
+					<!-- Icon -->
+					<Icon name="mdi:fountain" class="services-infoblock_icon" />
+					<h3>Landscaping</h3>
+					<p>Enhance your property's beauty and value with our comprehensive landscaping services. Our experts create captivating outdoor spaces, from lush gardens to stunning hardscapes. Enjoy a tranquil oasis or vibrant entertaining area.</p>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Scetion -->
+		<section class="contact">
+			<h2>Call us today for a friendly chat about your next project!</h2>
+			<a href="tel:+64278166962">027 816 6962</a>
+			<p>or fill out our online<br /> enquiry form 
+				<a class="contact-link">here.</a>
+			</p>
+		</section>
+		<!-- Recent Project Section -->
+		<section class="projects">
+			<div class="section-title-light">
+				<h2>Recent Projects</h2>
+			</div>
+			<div class="projects-container">
+				<h3>COMING SOON!</h3>
+			</div>
+		</section>
+
+		<section class="about">
+			<div class="about-title">
+				<h2>Logan Brown</h2>
+				<h3>CEO Logan Brown Construction</h3>
+			</div>
+			<div class="about-content">
+				<p>"At Logan Brown Construction, we bring unwavering dedication to every project, ensuring that your dreams are built with utmost care and precision. We take pride in our craftsmanship, pouring our passion into each detail to create spaces that exceed your expectations. See your dream transformed into reality.”</p>
+				<img src={profileImage} alt="Headshot of the CEO/Owner of Logan Brown Construction, Logan Brown" />
+			</div>
+		</section>
+		<!-- Footer -->
+		<Footer />
 	</body>
 </html>
