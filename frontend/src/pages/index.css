@@ -243,4 +243,28 @@
         @apply font-sans text-sm font-normal text-justify
     }
 
+    /* ABOUT PAGE SPECIFIC STYLES */
+
+    .about-mtb {
+        @apply flex items-center mb-3 justify-center
+    }
+    .about-mtb img {
+        @apply w-1/4
+    }
+
+    .about-mtb_title {
+        @apply flex flex-col ml-3
+    }
+
+    .about-mtb_title h2 {
+        @apply font-serif text-[32px] tracking-wider font-semibold
+        w-full mb-1
+    }
+    .about-mtb_title h3 {
+        @apply font-sans text-xl tracking-wider mb-0
+    }
+    .about-mtb_title h4 {
+        @apply font-sans italic text-[11px] opacity-50 tracking-wider
+    }
+
 }

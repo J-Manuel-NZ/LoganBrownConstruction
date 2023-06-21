@@ -1,0 +1,63 @@
+---
+import './index.css'
+import Footer from '../components/footer.astro';
+import Navbar from '../components/navbar';
+import ImageSlider from '../components/ImageSlider.jsx'
+import profileImage from '../../public/assets/logan_brown_headshot.png'
+
+const images = [
+        {image: '../../public/assets/hero_img.png', alt: 'picture 1'},
+        {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Logan Brown Construction | About</title>
+	</head>
+	<body class="bg-darkBlue flex flex-col">
+        <Navbar client:load />
+		<div class="section-title-light">
+			<h1>Who We Are</h1>
+		</div>
+		<section class="p-6 pb-0 flex flex-col services-content">
+			<p>
+				Welcome to Logan Brown Construction, your trusted partner for high-quality, high-end construction projects in Christchurch. With a steadfast commitment to excellence and a reputation built on trust, we bring your vision to life with unparalleled craftsmanship and attention to detail. 
+			</p>
+            <p>
+                What sets us apart is our unwavering dedication to quality. We handpick a team of qualified professionals, including architects, engineers, and skilled craftsmen, who share our passion for perfection. With their expertise and our rigorous quality control measures, we ensure that every aspect of your project is executed with precision, resulting in a finished product that is truly remarkable.
+            </p>
+            <p>
+                Trustworthiness lies at the core of our business. We value the trust our clients place in us, and we strive to uphold that trust in every interaction. From transparent communication and accurate project timelines to fair pricing and honest advice, we foster a relationship built on integrity and reliability. With Logan Brown Construction, you can have peace of mind, knowing that your project is in the hands of professionals who value your satisfaction above all else.
+            </p>
+            <p>
+                When it comes to quality, high-end projects in Christchurch, Logan Brown Construction is your premier choice. Contact us today to discuss your vision, and let us transform your dreams into a reality that surpasses all expectations. Trust us to build your future.
+            </p>
+		</section>
+
+		<ImageSlider client:load images={images} />
+
+		<section class="p-6 flex flex-col items-center services-content">
+            <div class="about-mtb">
+                <img src={profileImage} alt="CEO of Logan Brown Construction, Logan Brown">
+                <div class="about-mtb_title">
+                    <h2>Meet the Boss</h2>
+                    <h3>Logan Brown</h3>
+                    <h4>CEO, Head Foreman</h4>
+                </div>
+            </div>
+			<p>
+                Logan Brown, CEO of Logan Brown Construction, is a qualified builder, skilled craftsman, and all-around friendly guy. With a wealth of experience and a passion for producing the best work possible, Logan is dedicated to delivering exceptional results for every client. His warm and approachable nature creates a collaborative environment where ideas can flourish, and he values open communication to ensure clients' needs are met.
+			</p>
+            <p>
+                As a leader, Logan inspires his team to share his commitment to craftsmanship and client satisfaction. With a focus on excellence and attention to detail, he ensures that each project is executed to the highest standards. When you choose Logan Brown Construction, you're not only working with a qualified builder but also partnering with a friendly professional who prioritizes your vision and strives to exceed your expectations. Experience exceptional workmanship and a genuinely enjoyable construction journey with Logan Brown at the helm.
+            </p>
+			<button class="light_button">Get In Touch</button>
+		</section>
+
+        <Footer />
+    </body>
