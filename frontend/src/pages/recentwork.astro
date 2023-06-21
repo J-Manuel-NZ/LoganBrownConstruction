@@ -1,0 +1,24 @@
+---
+import './index.css'
+import Footer from '../components/footer.astro';
+import Navbar from '../components/navbar';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Logan Brown Construction | Projects</title>
+	</head>
+	<body class="bg-darkBlue flex flex-col">
+        <Navbar client:load />
+		<div class="section-title-light">
+			<h1>Who We Are</h1>
+		</div>
+		
+        <p class="text-whiteBlue">Project Component will be added here</p>
+
+        <Footer />
+    </body>
