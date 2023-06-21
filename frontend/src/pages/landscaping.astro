@@ -1,0 +1,65 @@
+---
+import './index.css'
+import Footer from '../components/footer.astro';
+import Navbar from '../components/navbar';
+import ImageSlider from '../components/ImageSlider.jsx'
+import Testimonial from '../components/testimonial.jsx'
+// These will become null and void once the logic is implemented below
+import image1 from '../../public/assets/hero_img.png'
+import image2 from '../../public/assets/secondary_img.png'
+ // Change this to accept an array of objects as a prop in order to construct the slideshow
+    // The idea is to use this component as a base to construct ALL slideshows by 
+    // passing the images as a prop when needed
+const images = [
+        {image: '../../public/assets/hero_img.png', alt: 'picture 1'},
+        {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Logan Brown Construction | Landscaping</title>
+	</head>
+	<body class="bg-darkBlue flex flex-col">
+        <Navbar client:load />
+		<div class="section-title-light">
+			<h1>Landscaping</h1>
+		</div>
+		<section class="p-6 flex flex-col services-content">
+			<h3>Elevate the Beauty of Your Outdoor Areas with our Landscaping Expertise</h3>
+			<p>
+				At Logan Brown Construction, our expertise extends beyond construction to include professional landscaping services. We understand the importance of outdoor spaces in creating a harmonious and inviting environment. Our team of skilled landscapers is dedicated to transforming your outdoor area into a breathtaking landscape that enhances the beauty and functionality of your property.
+			</p>
+			<h2>Our Landscaping Services Include:</h2>
+			<ul>
+				<li>All wooden outdoor construction including decks, fences, pergolas, outdoor kitchens and gazebos</li>
+				<li>Custom landscape design and planning</li>
+				<li>Installation of hardscapes such as patios, walkways, and retaining walls</li>
+				<li>Planting and installation of trees, shrubs, flowers, and other vegetation</li>
+				<li>Irrigation system design and installation</li>
+				<li>Sod and lawn installation</li>
+				<li>Outdoor lighting design and installation</li>
+				<li>Water features and pond construction</li>
+			</ul>
+		</section>
+
+		<ImageSlider client:load images={images} />
+
+		<section class="p-6 flex flex-col items-center services-content">
+			<p>
+                Our team combines creativity, technical expertise, and attention to detail to bring your landscaping vision to life. Whether you desire a serene garden retreat, an impressive front entrance, or an outdoor entertaining space, we have the knowledge and skills to transform your outdoor area into a stunning landscape that suits your lifestyle and enhances the value of your property.
+With Logan Brown Construction, you can trust that your landscaping project is in capable hands. We work closely with you, ensuring that your preferences and goals are incorporated into the design. From concept development to the final installation, we strive for excellence, providing meticulous craftsmanship and a seamless process from start to finish. Let us create a captivating outdoor space that you can enjoy for years to come. Get in touch today for a friendly consultation about transforming your outdoor area!
+			</p>
+			<button class="light_button">Get In Touch</button>
+			<div class="line"></div>
+		</section>
+		<section class="flex items-center justify-center">
+			<div class="h-40 w-40 bg-whiteBlue">Insert Reent projects here</div>
+		</section>
+
+        <Footer />
+    </body>

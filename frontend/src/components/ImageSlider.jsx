@@ -30,8 +30,8 @@ const ImageSlider = ({ images }) => {
         onSwiper={(swiper) => console.log(swiper)}
       >
         {imageArray.map((image) => (
-          <SwiperSlide class="slide" key={image.alt}>
-            <img src={image.image} alt={image.alt} />
+          <SwiperSlide  key={image.alt}>
+            <img class="slide" src={image.image} alt={image.alt} />
             
           </SwiperSlide>
         ))}

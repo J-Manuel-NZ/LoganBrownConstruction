@@ -8,10 +8,10 @@
 @layer components {
     /* MISC. STYLES */
     .slider {
-        @apply min-h-[350px] max-h-[450px] relative
+        @apply min-h-[350px] max-h-[380px] relative overflow-y-hidden flex
     }
-    .slide img {
-        @apply object-cover  
+    .slide {
+        @apply object-contain  
     }
     .light_button {
         @apply bg-whiteBlue text-darkBlue font-serif rounded-md
@@ -22,15 +22,15 @@
         shadow-md p-2 px-3 text-xl font-light tracking-tight
     }
     .section-title  {
-        @apply flex items-center justify-center p-1 text-whiteBlue 
+        @apply flex items-center justify-center text-whiteBlue 
         font-serif text-[40px]
     }
     .section-title-light  {
-        @apply flex items-center justify-center p-1 text-darkBlue bg-whiteBlue 
+        @apply flex items-center justify-center text-darkBlue bg-whiteBlue 
         font-serif text-[40px]
     }
     .line {
-        @apply h-[1px] bg-whiteBlue w-full my-3
+        @apply h-[1px] bg-whiteBlue w-full mt-6
     }
     /* NAVBAR STYLES */
     .navbar {
@@ -55,8 +55,9 @@
     .navbar-menu_item-active {
         @apply text-accentGreen
     }
-
-    /* HERO SECTION STYLES */
+/* ------------------------------------------------------------------------------ */
+/* LANDING PAGE STYLES */
+/* HERO SECTION STYLES */
 
     .hero-section {
         @apply relative h-screen bg-no-repeat left-0 -mt-20 bg-hero_image bg-cover
@@ -205,6 +206,26 @@
 
     .footer-legal {
         @apply text-whiteBlue font-serif text-[10px] tracking-tight mt-2 font-extralight
+    }
+
+/* ----------------------------------------------------------------------------- */
+    
+/* RENOVATION PAGE STYLES */
+
+    .services-content {
+        @apply text-whiteBlue font-sans text-justify
+    }
+    .services-content h2,
+    .services-content h3 {
+        @apply font-serif text-left text-2xl 
+        font-semibold tracking-wider leading-6 mb-3
+    }
+    .services-content p {
+        @apply text-sm font-normal mb-6
+    }
+
+    .services-content ul {
+        @apply decoration-auto text-left text-base font-medium list-disc px-6
     }
 
 }
