@@ -31,13 +31,13 @@ const Navbar = () => {
           )}
           {isMenuOpen && (
               <ul className="navbar-menu" onClick={() => setIsMenuOpen(false)}>
-                  <li className='navbar-menu_item'>Home</li>
-                  <li className='navbar-menu_item'>Design & Build</li>
-                  <li className='navbar-menu_item'>Renovations</li>
-                  <li className='navbar-menu_item'>Landscaping</li>
-                  <li className='navbar-menu_item'>Recent Work</li>
-                  <li className='navbar-menu_item'>About</li>
-                  <li className='navbar-menu_item'>Contact</li>
+                  <li className='navbar-menu_item'><a href='/'>Home</a></li>
+                  <li className='navbar-menu_item'><a href='/design&build'>Design & Build</a></li>
+                  <li className='navbar-menu_item'><a href='/renovations'>Renovations</a></li>
+                  <li className='navbar-menu_item'><a href='/landscaping'>Landscaping</a></li>
+                  <li className='navbar-menu_item'><a href='/recentwork'>Recent Work</a></li>
+                  <li className='navbar-menu_item'><a href='/about'>About</a></li>
+                  <li className='navbar-menu_item'><a href='/contact'>Contact</a></li>
               </ul>
           )}
       </div>
