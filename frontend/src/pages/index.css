@@ -210,7 +210,7 @@
 
 /* ----------------------------------------------------------------------------- */
     
-/* RENOVATION PAGE STYLES */
+/* SERVICE PAGE STYLES */
 
     .services-content {
         @apply text-whiteBlue font-sans text-justify
@@ -226,6 +226,21 @@
 
     .services-content ul {
         @apply decoration-auto text-left text-base font-medium list-disc px-6
+    }
+
+    /* DESIGN AND BUILD SPECIFIC STYLES */
+    .step-block {
+        @apply flex flex-col items-center justify-center
+        text-whiteBlue shadow-xl p-5 rounded-xl
+    }
+    .step-block :first-child {
+        @apply h-12 w-12
+    }
+    .step-block h3 {
+        @apply font-serif text-xl font-semibold tracking-wider my-3
+    }
+    .step-block p {
+        @apply font-sans text-sm font-normal text-justify
     }
 
 }

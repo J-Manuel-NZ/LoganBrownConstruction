@@ -1,0 +1,107 @@
+---
+import './index.css'
+import Icon from 'astro-icon'
+import Footer from '../components/footer.astro';
+import Navbar from '../components/navbar';
+import ImageSlider from '../components/ImageSlider.jsx'
+import Testimonial from '../components/testimonial.jsx'
+// These will become null and void once the logic is implemented below
+import image1 from '../../public/assets/hero_img.png'
+import image2 from '../../public/assets/secondary_img.png'
+ // Change this to accept an array of objects as a prop in order to construct the slideshow
+    // The idea is to use this component as a base to construct ALL slideshows by 
+    // passing the images as a prop when needed
+const images = [
+        {image: '../../public/assets/hero_img.png', alt: 'picture 1'},
+        {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Logan Brown Construction | Design & Build</title>
+	</head>
+	<body class="bg-darkBlue flex flex-col">
+        <Navbar client:load />
+		<div class="section-title-light">
+			<h1>Design & Build</h1>
+		</div>
+		<section class="p-6 pb-0 flex flex-col services-content">
+			<h2>Beautifully Crafted to Suit  Your Lifestyle</h3>
+			<p>
+				Welcome to Logan Brown Construction, where design and construction meet to create extraordinary spaces. With our expertise in the industry, we are dedicated to transforming your vision into reality. Whether it's crafting your dream home or bringing new life to a commercial space, we combine innovation, functionality, and exceptional craftsmanship to deliver outstanding results. Join us on a journey where imagination takes shape and dreams come true.
+			</p>
+			<h3>A Dedicated Approach</h2>
+			<p>
+                At Logan Brown Construction, we believe that great design and flawless execution go hand in hand. Our approach is rooted in collaboration, ensuring that your unique preferences and aspirations are at the forefront of every decision. We work closely with you, listening attentively to your needs, and blending our expertise with your vision. By harmonizing creativity, practicality, and attention to detail, we create spaces that reflect your personality, exceed your expectations, and stand the test of time.
+            </p>
+		</section>
+
+		<ImageSlider client:load images={images} />
+
+		<section class="p-6 flex flex-col items-center services-content">
+            <h3>Our Collaborative Process</h2>
+			<p>
+                At Logan Brown Construction, we believe that a well-defined and collaborative design and build process is crucial for successful projects. Our six-step approach ensures that we capture your vision, deliver exceptional craftsmanship, and bring your dreams to life. From start to finish, we are committed to providing a seamless and rewarding experience, resulting in a space that truly reflects your style and exceeds your expectations.
+			</p>
+        </section>
+        <section class="p-6 pb-0 flex flex-col gap-6">
+
+            <div class='step-block bg-darkBlue'>
+                <Icon name='tabler:coffee'/>
+                <h3>Initial Consultation</h3>
+                <p>
+                    We start by sitting down with you to understand your vision, goals, and requirements for your project. This consultation allows us to gain insight into your style preferences, functional needs, and budget considerations. We listen attentively and collaborate closely with you to ensure that we capture your vision accurately.
+                </p>
+            </div>
+            <div class='step-block bg-step2'>
+                <Icon name='icon-park-outline:concept-sharing' />
+                <h3>Concept Development</h3>
+                <p>
+                    Based on the information gathered during the initial consultation, our team of skilled designers and architects begins creating conceptual designs for your project. We explore various possibilities, integrating your ideas with our expertise to develop innovative and practical design concepts that reflect your unique style and desired functionality.
+                </p>
+            </div>
+            <div class='step-block bg-step3'>
+                <Icon name='icon-park:list'/>
+                <h3>Detailed Planning</h3>
+                <p>
+                    Once the concept is approved, we move on to the detailed planning phase. Our team meticulously develops comprehensive plans, including architectural drawings, structural engineering, and material specifications. This step ensures that every aspect of the project is carefully considered, allowing for seamless execution and accurate cost estimation.
+                </p>
+            </div>
+            <div class='step-block bg-step4'>
+                <Icon name='mdi:worker' />
+                <h3>Construction</h3>
+                <p>
+                    With the plans in place, our dedicated construction team takes charge of turning your vision into reality. Our experienced craftsmen, project managers, and tradespeople work together with precision and attention to detail, ensuring that each element is meticulously executed. We maintain open lines of communication throughout the construction process, keeping you updated on progress and addressing any questions or concerns that may arise.
+                </p>
+            </div>
+            <div class='step-block bg-step5'>
+                <Icon name='ps:magnifying-glass' />
+                <h3>Inspections</h3>
+                <p>
+                    At Logan Brown Construction, we prioritize quality and strive for excellence in every project. Throughout the construction phase, our team conducts regular inspections and quality control checks to ensure that all work meets our rigorous standards. We pay close attention to every detail, ensuring that the finished result is of the highest quality and exceeds your expectations.
+                </p>
+            </div>
+            <div class='step-block bg-step6'>
+                <Icon name='fa-regular:handshake' />
+                <h3>Project Completion</h3>
+                <p>
+                    Once construction is complete, we conduct a final walkthrough to ensure that every element of the project meets your satisfaction. We address any remaining items and make sure that all finishing touches are in place. We take pride in delivering projects on time and within budget. With the utmost care, we hand over your completed space, ready for you to enjoy and create lasting memories.
+                </p>
+            </div>
+        </section>
+
+        <section class="p-6 pb-0 flex flex-col justify-center items-center">
+			<button class="light_button">Get In Touch</button>
+			<div class="line"></div>
+		</section>
+		<section class="flex items-center justify-center">
+			<div class="h-40 w-40 bg-whiteBlue">Insert Reent projects here</div>
+		</section>
+
+        <Footer />
+    </body>

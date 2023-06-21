@@ -11,11 +11,17 @@ module.exports = {
 		colors: {
 			darkBlue: '#161D27',
 			whiteBlue: '#E8F1F2',
-			accentGreen: '#22FF00'
+			accentGreen: '#22FF00',
+			step2: '#232E3E',
+			step3: '#314259',
+			step4: '#465C7C',
+			step5: '#56749E',
+			step6: '#7094C8',
 		},
 		backgroundImage: {
 			'hero_image' : "url('/public/assets/hero_img.png')"
 		}
+		
 	},
 	plugins: [],
 }
