@@ -4,6 +4,8 @@ import Footer from '../components/footer.astro';
 import Navbar from '../components/navbar';
 import ImageSlider from '../components/ImageSlider.jsx'
 import Testimonial from '../components/testimonial.jsx'
+import ProjectList from '../components/ProjectList';
+import articles from '../articles/articles';
 // These will become null and void once the logic is implemented below
 import image1 from '../../public/assets/hero_img.png'
 import image2 from '../../public/assets/secondary_img.png'
@@ -60,8 +62,7 @@ const images = [
 			<div class="line"></div>
 		</section>
 		<section class="flex items-center justify-center">
-			<div class="h-40 w-40 bg-whiteBlue">Insert Reent projects here</div>
+			<ProjectList client:load count={2} articles={articles} home={false} />
 		</section>
-
         <Footer />
     </body>

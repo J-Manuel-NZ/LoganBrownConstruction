@@ -4,11 +4,9 @@ import Icon from 'astro-icon'
 import Footer from '../components/footer.astro';
 import Navbar from '../components/navbar';
 import ImageSlider from '../components/ImageSlider.jsx'
-import Testimonial from '../components/testimonial.jsx'
-// These will become null and void once the logic is implemented below
-import image1 from '../../public/assets/hero_img.png'
-import image2 from '../../public/assets/secondary_img.png'
- // Change this to accept an array of objects as a prop in order to construct the slideshow
+import articles from '../articles/articles';
+import ProjectList from '../components/ProjectList';
+// Change this to accept an array of objects as a prop in order to construct the slideshow
     // The idea is to use this component as a base to construct ALL slideshows by 
     // passing the images as a prop when needed
 const images = [
@@ -100,8 +98,7 @@ const images = [
 			<div class="line"></div>
 		</section>
 		<section class="flex items-center justify-center">
-			<div class="h-40 w-40 bg-whiteBlue">Insert Reent projects here</div>
+            <ProjectList client:load count={2} articles={articles} home={false} />
 		</section>
-
         <Footer />
     </body>

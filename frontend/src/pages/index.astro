@@ -6,6 +6,8 @@ import buildingImage from '../../public/assets/secondary_img.png'
 import Footer from '../components/footer.astro'
 import { Icon } from 'astro-icon'
 import profileImage from '../../public/assets/logan_brown_headshot.png'
+import ProjectList from '../components/ProjectList'
+import articles from '../articles/articles'
 ---
 
 <html lang="en">
@@ -74,7 +76,7 @@ import profileImage from '../../public/assets/logan_brown_headshot.png'
 				<h2>Recent Projects</h2>
 			</div>
 			<div class="projects-container">
-				<h3>COMING SOON!</h3>
+				<ProjectList client:load count={1} articles={articles} home={true} />
 			</div>
 		</section>
 

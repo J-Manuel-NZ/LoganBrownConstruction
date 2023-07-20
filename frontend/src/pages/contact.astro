@@ -1,0 +1,35 @@
+---
+import './index.css'
+import Footer from '../components/footer.astro';
+import Navbar from '../components/navbar';
+import ImageSlider from '../components/ImageSlider.jsx'
+import Testimonial from '../components/testimonial.jsx'
+import ProjectList from '../components/ProjectList';
+import articles from '../articles/articles';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Logan Brown Construction | Contact Us</title>
+	</head>
+	<body class="bg-darkBlue flex flex-col">
+        <Navbar client:load />
+		<div class="section-title-light contact-title">
+			<h1>Let's get started on turning your dream into a reality</h1>
+            <a href="tel:+64278166962">027 816 6962</a> 
+            <h2>or send us a quick message</h2>
+		</div>
+		<section class="p-6 flex flex-col services-content">
+			<form>
+
+            </form>
+		</section>
+		<section class="flex items-center justify-center">
+			<ProjectList client:load count={2} articles={articles} home={false} />
+		</section>
+        <Footer />
+    </body>

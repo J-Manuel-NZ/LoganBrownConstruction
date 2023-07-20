@@ -1,10 +1,11 @@
 ---
-import './index.css'
+import '../index.css'
 import Footer from '../components/footer.astro';
 import Navbar from '../components/navbar';
-import ProjectList from '../components/ProjectList';
-import articles from '../articles/articles'
-console.log(articles)
+import ProjectList	from '../components/ProjectList'
+import articles from '../articles/articles';
+
+const title = 'the-cashmere-dream'
 ---
 
 <html lang="en">
@@ -13,16 +14,17 @@ console.log(articles)
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Logan Brown Construction | Projects</title>
+		<title>Logan Brown Construction | {title}</title>
 	</head>
 	<body class="bg-darkBlue flex flex-col">
         <Navbar client:load />
-		<div class="section-title-light">
-			<h1>Our Projects</h1>
-		</div>
+        <slot>
+
+        </slot>
 		
         <ProjectList client:load count={3} articles={articles} home={false} />
 
 
         <Footer />
     </body>
+</html>

@@ -21,6 +21,10 @@
         @apply bg-darkBlue text-accentGreen font-serif rounded-md
         shadow-md p-2 px-3 text-xl font-light tracking-tight
     }
+    .see_all {
+        @apply bg-darkBlue text-whiteBlue font-serif rounded-md
+        shadow-md p-1 px-6 text-xl font-light tracking-tight
+    }
     .section-title  {
         @apply flex items-center justify-center text-whiteBlue 
         font-serif text-[40px]
@@ -133,10 +137,14 @@
 
     /* RECENT PROJECT SECTION STYLES */
     .projects {
-        @apply bg-whiteBlue p-6
+        @apply bg-whiteBlue pt-3
     }
     .projects-container h3 {
-        @apply text-darkBlue font-serif text-5xl   
+        @apply text-darkBlue font-serif text-5xl -mb-6   
+    }
+
+    .projects .project-list {
+        @apply pt-0
     }
 
     /* ABOUT SECTION STYLES */
@@ -210,6 +218,22 @@
 
 /* ----------------------------------------------------------------------------- */
     
+/* CONTACT PAGE STYLES */
+
+    .contact-title {
+        @apply flex-col items-center justify-center p-3
+    }
+    .contact-title h1, h2 {
+        @apply font-semibold tracking-tight font-serif opacity-80
+        px-3 text-darkBlue text-[28px] text-center leading-tight
+    }
+    .contact-title a {
+        @apply font-numbers underline font-semibold text-[44px] text-darkBlue
+    }
+    .contact-title h2 {
+        @apply text-xl
+    }
+
 /* SERVICE PAGE STYLES */
 
     .services-content {
@@ -267,4 +291,32 @@
         @apply font-sans italic text-[11px] opacity-50 tracking-wider
     }
 
+    /* PROJECT CARD STYLES */
+
+    .project-card {
+        @apply m-3 my-3 rounded-lg flex flex-col relative shadow min-h-[300px]
+    }
+    .project-card img {
+        @apply object-cover rounded-lg 
+    }
+
+    .project-card_content {
+        @apply flex flex-col absolute bottom-0 bg-whiteBlue px-6 pb-3 pt-2
+        justify-start rounded-b-lg w-full
+    }
+    .project-card_date {
+        @apply font-semibold text-[8px] opacity-50 tracking-wider
+    }
+    .project-card_title {
+        @apply font-semibold text-base tracking-wider my-1 leading-5
+    }
+    .project-card_description {
+        @apply text-xs tracking-wider leading-4
+    }
+
+    /* PROJECT LIST STYLES */
+    
+    .project-list {
+        @apply px-6 pt-6 pb-6 flex flex-col items-center gap-3
+    }
 }

@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 const ImageSlider = ({ images }) => {
     const imageArray = images;
   return (
-    <div class='slider'>
+    <div className='slider'>
       <Swiper
         style={{
           "--swiper-pagination-bullet-inactive-color": "rgba(232,241,242,.5)",
