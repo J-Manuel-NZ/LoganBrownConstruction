@@ -223,7 +223,7 @@
     .contact-title {
         @apply flex-col items-center justify-center p-3
     }
-    .contact-title h1, h2 {
+    .contact-title h1, .contact-title h2 {
         @apply font-semibold tracking-tight font-serif opacity-80
         px-3 text-darkBlue text-[28px] text-center leading-tight
     }
@@ -233,6 +233,128 @@
     .contact-title h2 {
         @apply text-xl
     }
+
+    .contact-form {
+        @apply flex flex-col justify-center
+    }
+
+    .contact-form label {
+        @apply text-xs text-whiteBlue opacity-80 tracking-tight ml-2 my-1
+    }
+    .contact-form input, 
+    .contact-form textarea {
+        @apply text-sm text-darkBlue tracking-tight p-2 font-bold rounded-md
+    }
+    .contact-form input:focus, 
+    .contact-form textarea:focus {
+        outline-color: #f1ff31;
+    }
+    .contact-form input:invalid, 
+    .contact-form textarea:invalid {
+        outline-color: #FF4B4B;
+    }
+    .contact-form input:valid, 
+    .contact-form textarea:valid {
+        outline-color: #22FF00;
+    }
+
+    .send_button {
+        @apply my-6 font-semibold text-2xl text-whiteBlue  p-3
+         border-whiteBlue border-solid border-2 rounded-md
+    }
+
+    .send_button:active {
+        @apply bg-accentGreen transition-all
+    }
+
+    
+
+    
+/* Adapted from https://codepen.io/Metty/pen/MWjOavR */
+    .contact-form_radio-selection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        height: auto;
+        width: auto;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        padding: 20px 0px;
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    }
+    .contact-form_radio-selection .option{
+        height: 50px; 
+        width: 100%;       
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 0 10px;
+        border: 2px solid #E8F1F2;
+        transition: all 0.3s ease;
+        margin-left: 0;
+        opacity: 100;
+    }
+    .contact-form_radio-selection .option .dot{
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        background: #E8F1F2;
+        border-radius: 50%;
+        position: relative;
+    }
+    .contact-form_radio-selection .option .dot::before{
+        position: absolute;
+        content: "";
+        top: 4px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        background: #E8F1F2;
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(1.5);
+        transition: all 0.3s ease;
+    }
+    input[type="radio"]{
+        display: none;
+    }
+    #option-1:checked:checked ~ .option-1,
+    #option-2:checked:checked ~ .option-2,
+    #option-3:checked:checked ~ .option-3,
+    #option-4:checked:checked ~ .option-4{
+    border-color: #161D27;
+    background: #E8F1F2;
+    }
+    #option-1:checked:checked ~ .option-1 .dot,
+    #option-2:checked:checked ~ .option-2 .dot,
+    #option-3:checked:checked ~ .option-3 .dot,
+    #option-4:checked:checked ~ .option-4 .dot{
+    background: #161D27;
+    }
+    #option-1:checked:checked ~ .option-1 .dot::before,
+    #option-2:checked:checked ~ .option-2 .dot::before,
+    #option-3:checked:checked ~ .option-3 .dot::before,
+    #option-4:checked:checked ~ .option-4 .dot::before{
+    opacity: 1;
+    transform: scale(1);
+    }
+    .contact-form_radio-selection .option span{
+    font-size: 14px;
+    color: #E8F1F2;
+    }
+    #option-1:checked:checked ~ .option-1 span,
+    #option-2:checked:checked ~ .option-2 span,
+    #option-3:checked:checked ~ .option-3 span,
+    #option-4:checked:checked ~ .option-4 span{
+    color: #161D27;
+    font-weight: bold;
+    }
+
 
 /* SERVICE PAGE STYLES */
 
@@ -318,5 +440,16 @@
     
     .project-list {
         @apply px-6 pt-6 pb-6 flex flex-col items-center gap-3
+    }
+
+    /* SENT MESSAGE FOR CONTACT FORM */
+    .contact-form_sent {
+        @apply flex flex-col items-center justify-center font-serif
+    } 
+    .contact-form_sent h3 {
+        @apply text-4xl font-serif
+    }
+    .contact-form_sent p {
+        @apply text-base font-serif -m-3
     }
 }
