@@ -13,13 +13,13 @@ const Navbar = () => {
     // -------------------------------------
     // **
       <div className="navbar">
-        <img src={logo} alt="Logan Brown Construction Logo" />
+        <a href='/'><img src={logo} alt="Logan Brown Construction Logo" /></a>
           {isMenuOpen ? (
               <FontAwesomeIcon
                   icon={faXmark}
                   alt="Close Icon"
                   onClick={() => setIsMenuOpen(false)}
-                  className='navbar-icon'
+                  className='navbar-icon fixed'
               />
           ) : (
               <FontAwesomeIcon
