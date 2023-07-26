@@ -9,6 +9,7 @@ import articles from '../articles/articles'
 import image1 from '../../public/assets/hero_img.png'
 import image2 from '../../public/assets/secondary_img.png'
 import ProjectList from '../components/ProjectList';
+import '../../node_modules/animate.css/animate.css'
  // Change this to accept an array of objects as a prop in order to construct the slideshow
     // The idea is to use this component as a base to construct ALL slideshows by 
     // passing the images as a prop when needed
@@ -27,17 +28,17 @@ const images = [
 		<title>Logan Brown Construction | Landscaping</title>
 	</head>
 	<body class="bg-darkBlue flex flex-col">
-        <Navbar client:load />
+        <Navbar page="landscaping" client:load />
 		<div class="section-title-light">
-			<h1>Landscaping</h1>
+			<h1 class="animate__animated animate__fadeIn animate__slow">Landscaping</h1>
 		</div>
 		<section class="p-6 flex flex-col services-content">
-			<h3>Elevate the Beauty of Your Outdoor Areas with our Landscaping Expertise</h3>
-			<p>
+			<h3 class="animate__animated animate__fadeInUp animate__slow">Elevate the Beauty of Your Outdoor Areas with our Landscaping Expertise</h3>
+			<p class="animate__animated animate__fadeInUp animate__slow">
 				At Logan Brown Construction, our expertise extends beyond construction to include professional landscaping services. We understand the importance of outdoor spaces in creating a harmonious and inviting environment. Our team of skilled landscapers is dedicated to transforming your outdoor area into a breathtaking landscape that enhances the beauty and functionality of your property.
 			</p>
-			<h2>Our Landscaping Services Include:</h2>
-			<ul>
+			<h2 class="animate__animated animate__fadeIn animate__delay-2s">Our Landscaping Services Include:</h2>
+			<ul class="animate__animated animate__fadeIn animate__delay-2s">
 				<li>All wooden outdoor construction including decks, fences, pergolas, outdoor kitchens and gazebos</li>
 				<li>Custom landscape design and planning</li>
 				<li>Installation of hardscapes such as patios, walkways, and retaining walls</li>

@@ -5,6 +5,7 @@ import Navbar from '../components/navbar';
 import ProjectList from '../components/ProjectList';
 import articles from '../articles/articles'
 console.log(articles)
+import '../../node_modules/animate.css/animate.css'
 ---
 
 <html lang="en">
@@ -16,9 +17,9 @@ console.log(articles)
 		<title>Logan Brown Construction | Projects</title>
 	</head>
 	<body class="bg-darkBlue flex flex-col">
-        <Navbar client:load />
+        <Navbar page='recentwork' client:load />
 		<div class="section-title-light">
-			<h1>Our Projects</h1>
+			<h1 class="animate__animated animate__fadeIn animate__slow">Our Projects</h1>
 		</div>
 		
         <ProjectList client:load count={3} articles={articles} home={false} />

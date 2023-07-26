@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBars} from '@fortawesome/free-solid-svg-icons'
 import logo from '../../public/assets/lbc_logo.jpg'
+import '../../node_modules/animate.css/animate.css'
 
-const Navbar = () => {
+const Navbar = ({page}) => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -30,14 +31,42 @@ const Navbar = () => {
               />
           )}
           {isMenuOpen && (
-              <ul className="navbar-menu" onClick={() => setIsMenuOpen(false)}>
-                  <li className='navbar-menu_item'><a href='/'>Home</a></li>
-                  <li className='navbar-menu_item'><a href='/design&build'>Design & Build</a></li>
+              <ul className="navbar-menu animate__animated animate__fadeInDown" onClick={() => setIsMenuOpen(false)}>
+                {page === 'home'
+                ? <li className='navbar-menu_item menu-active'><a href='/'>Home</a></li>
+                : <li className='navbar-menu_item'><a href='/'>Home</a></li>
+                }
+                {page === 'd&b'
+                ? <li className='navbar-menu_item menu-active'><a href='/design&build'>Design & Build</a></li>
+                : <li className='navbar-menu_item'><a href='/design&build'>Design & Build</a></li>
+                }
+                {page === 'renovations'
+                ? <li className='navbar-menu_item menu-active'><a href='/renovations'>Renovations</a></li>
+                : <li className='navbar-menu_item'><a href='/renovations'>Renovations</a></li>
+                }
+                {page === 'landscaping'
+                ? <li className='navbar-menu_item menu-active'><a href='/landscaping'>Landscaping</a></li>
+                : <li className='navbar-menu_item'><a href='/landscaping'>Landscaping</a></li>
+                }
+                {page === 'recentwork'
+                ? <li className='navbar-menu_item menu-active'><a href='/recentwork'>Recent Work</a></li>
+                : <li className='navbar-menu_item'><a href='/recentwork'>Recent Work</a></li>
+                }
+                {page === 'about'
+                ? <li className='navbar-menu_item menu-active'><a href='/about'>About</a></li>
+                : <li className='navbar-menu_item'><a href='/about'>About</a></li>
+                }
+                {page === 'contact'
+                ? <li className='navbar-menu_item menu-active'><a href='/contact'>Contact</a></li>
+                : <li className='navbar-menu_item'><a href='/contact'>Contact</a></li>
+                }
+                  
+                  {/* <li className='navbar-menu_item'><a href='/design&build'>Design & Build</a></li>
                   <li className='navbar-menu_item'><a href='/renovations'>Renovations</a></li>
                   <li className='navbar-menu_item'><a href='/landscaping'>Landscaping</a></li>
                   <li className='navbar-menu_item'><a href='/recentwork'>Recent Work</a></li>
                   <li className='navbar-menu_item'><a href='/about'>About</a></li>
-                  <li className='navbar-menu_item'><a href='/contact'>Contact</a></li>
+                  <li className='navbar-menu_item'><a href='/contact'>Contact</a></li> */}
               </ul>
           )}
       </div>

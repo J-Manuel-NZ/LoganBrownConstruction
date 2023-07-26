@@ -6,6 +6,9 @@
 @tailwind utilities;
 
 @layer components {
+    .body {
+        @apply scroll-smooth
+    }
     /* MISC. STYLES */
     .slider {
         @apply min-h-[350px] max-h-[380px] relative overflow-y-hidden flex
@@ -14,16 +17,19 @@
         @apply object-contain  
     }
     .light_button {
-        @apply bg-whiteBlue text-darkBlue font-serif rounded-md
+        @apply bg-whiteBlue text-darkBlue font-serif
         shadow-md p-2 px-3 text-xl font-bold tracking-tight
+        hover:opacity-90 active:opacity-80 transition-all
     }
     .dark_button {
-        @apply bg-darkBlue text-accentGreen font-serif rounded-md
+        @apply bg-darkBlue text-accentGreen font-serif 
         shadow-md p-2 px-3 text-xl font-light tracking-tight
+        hover:bg-step2 active:opacity-80 transition-all
     }
     .see_all {
-        @apply bg-darkBlue text-whiteBlue font-serif rounded-md
+        @apply bg-darkBlue text-whiteBlue font-serif
         shadow-md p-1 px-6 text-xl font-light tracking-tight
+        hover:opacity-60 active:opacity-80 transition-all
     }
     .section-title  {
         @apply flex items-center justify-center text-whiteBlue 
@@ -38,13 +44,14 @@
     }
     /* NAVBAR STYLES */
     .navbar {
-        @apply flex justify-between relative items-start
+        @apply flex justify-between relative items-start pb-5
     }
     .navbar img {
         @apply h-12 w-auto z-10 mt-6 ml-6
     }
     .navbar-icon {
         @apply h-10 w-10 text-whiteBlue right-3 absolute z-20 mt-6 mr-6
+        cursor-pointer
     }
 
     .navbar-menu {
@@ -54,9 +61,10 @@
     }
     .navbar-menu_item {
         @apply text-whiteBlue font-serif text-4xl tracking-widest
+        hover:text-accentGreen hover:opacity-50
     }
     
-    .navbar-menu_item-active {
+    .menu-active {
         @apply text-accentGreen
     }
 /* ------------------------------------------------------------------------------ */
@@ -64,7 +72,7 @@
 /* HERO SECTION STYLES */
 
     .hero-section {
-        @apply relative h-screen bg-no-repeat left-0 -mt-20 bg-hero_image bg-cover
+        @apply relative h-screen bg-no-repeat left-0 -mt-24 bg-hero_image bg-cover
     }
     .hero-section_content {
         @apply absolute bottom-6 p-12
@@ -108,7 +116,7 @@
 
     .services-infoblock h3 {
         @apply font-semibold text-xl tracking-wider
-        my-2
+        my-2 underline
     }
     .services-infoblock p {
         @apply text-xs font-medium leading-tight
@@ -417,6 +425,7 @@
 
     .project-card {
         @apply my-3 rounded-lg flex flex-col relative shadow min-h-[300px]
+        hover:scale-105 transition-all
     }
     .project-card img {
         @apply object-cover rounded-lg 

@@ -8,6 +8,7 @@ import { Icon } from 'astro-icon'
 import profileImage from '../../public/assets/logan_brown_headshot.png'
 import ProjectList from '../components/ProjectList'
 import articles from '../articles/articles'
+import '../../node_modules/animate.css/animate.css'
 ---
 
 <html lang="en">
@@ -18,17 +19,17 @@ import articles from '../articles/articles'
 		<meta name="generator" content={Astro.generator} />
 		<title>Logan Brown Construction</title>
 	</head>
-	<body class="bg-darkBlue flex flex-col">
+	<body class="bg-darkBlue flex flex-col animate__animated scroll-smooth">
 		<!-- Navbar -->
-		<Navbar client:load />
+		<Navbar page='home' client:load />
 		<!-- Hero Section -->
 		<section class="hero-section">
 			<div class="hero-section_content">
-				<h1>Make your dream home a reality.</h1>
-				<h2>Friendly and professional build specialists based in Christchurch</h2>
-				<div class="hero-section_buttons">
-					<button class="light_button">Our Services</button>
-					<button class="dark_button">Get in Touch</button>
+				<h1 class="animate__animated animate__fadeInUp animate__slow">Make your dream home a reality.</h1>
+				<h2 class="animate__animated animate__fadeInUp animate__delay-1s">Friendly and professional build specialists based in Christchurch</h2>
+				<div class="hero-section_buttons animate__animated animate__fadeInUp animate__delay-1s">
+					<a href="#services"><button class="light_button">Our Services</button></a>
+					<a href="/contact"></a><button class="dark_button">Get in Touch</button></a>
 				</div>
 			</div>
 		</section>
@@ -37,29 +38,35 @@ import articles from '../articles/articles'
 		<!-- Image or Slider of previous work -->
 		<img class="mt-9" src={buildingImage} alt="Finished high-end home by Logan Brown Construction">
 		<!-- Services Section -->
-		<section class="services">
+		<section class="services" id="services">
 			<div class="section-title">
 				<h2>Our Services</h2>
 			</div>
 			<div class="bg-whiteBlue shaddow-inner py-6">
-				<div class="services-infoblock">
+				<!-- <div class="services-infoblock"> -->
 					<!-- Icon -->
-					<Icon name="mdi:pencil-ruler" class="services-infoblock_icon" />
-					<h3>Design & Build</h3>
-					<p>Turn your dreams into reality with our expert team. From design to finishing touches, we deliver quality craftsmanship and attention to detail. Let us build your custom home, tailored to your style and needs.</p>
-				</div>
-				<div class="services-infoblock">
+					<a href="/design&build" class="services-infoblock">
+						<Icon name="mdi:pencil-ruler" class="services-infoblock_icon" />
+						<h3>Design & Build</h3>
+						<p>Turn your dreams into reality with our expert team. From design to finishing touches, we deliver quality craftsmanship and attention to detail. Let us build your custom home, tailored to your style and needs.</p>
+					</a>
+				<!-- </div> -->
+				<!-- <div class="services-infoblock"> -->
 					<!-- Icon -->
-					<Icon name="jam:hammer" class="services-infoblock_icon" />
-					<h3>Renovations</h3>
-					<p>Transform your space with our professional renovation services. We bring creativity and expertise to every project, updating single rooms or your entire property. Experience a functional, stylish, and inviting home.</p>
-				</div>
-				<div class="services-infoblock">
+					<a href="/renovations" class="services-infoblock">
+						<Icon name="jam:hammer" class="services-infoblock_icon" />
+						<h3>Renovations</h3>
+						<p>Transform your space with our professional renovation services. We bring creativity and expertise to every project, updating single rooms or your entire property. Experience a functional, stylish, and inviting home.</p>
+					</a>
+				<!-- </div> -->
+				<!-- <div class="services-infoblock"> -->
 					<!-- Icon -->
-					<Icon name="mdi:fountain" class="services-infoblock_icon" />
-					<h3>Landscaping</h3>
-					<p>Enhance your property's beauty and value with our comprehensive landscaping services. Our experts create captivating outdoor spaces, from lush gardens to stunning hardscapes. Enjoy a tranquil oasis or vibrant entertaining area.</p>
-				</div>
+					<a href="/landscaping" class="services-infoblock">
+						<Icon name="mdi:fountain" class="services-infoblock_icon" />
+						<h3>Landscaping</h3>
+						<p>Enhance your property's beauty and value with our comprehensive landscaping services. Our experts create captivating outdoor spaces, from lush gardens to stunning hardscapes. Enjoy a tranquil oasis or vibrant entertaining area.</p>
+					</a>
+				<!-- </div> -->
 			</div>
 		</section>
 		<!-- Contact Scetion -->

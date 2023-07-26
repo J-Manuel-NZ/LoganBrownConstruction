@@ -19,11 +19,13 @@ const ProjectList = ( { count, articles, home } ) => {
             : null
         ))}
         {home ? 
-        <a href='/recentwork'><button className='see_all'>See All</button></a> 
+        <div className='project-list_button-container'>
+          <a href='/recentwork'><button className='see_all'>See All</button></a> 
+        </div>
         :
         <div className='project-list_button-container'>
-        <button className='light_button'
-        onClick={() => setCounter(counter+3)}>See More</button>
+          <button className='light_button'
+          onClick={() => setCounter(counter+3)}>See More</button>
         </div>
         }
     </div>

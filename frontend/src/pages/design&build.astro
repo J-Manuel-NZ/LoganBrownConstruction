@@ -6,6 +6,7 @@ import Navbar from '../components/navbar';
 import ImageSlider from '../components/ImageSlider.jsx'
 import articles from '../articles/articles';
 import ProjectList from '../components/ProjectList';
+import '../../node_modules/animate.css/animate.css'
 // Change this to accept an array of objects as a prop in order to construct the slideshow
     // The idea is to use this component as a base to construct ALL slideshows by 
     // passing the images as a prop when needed
@@ -24,17 +25,17 @@ const images = [
 		<title>Logan Brown Construction | Design & Build</title>
 	</head>
 	<body class="bg-darkBlue flex flex-col">
-        <Navbar client:load />
+        <Navbar page="d&b" client:load />
 		<div class="section-title-light">
-			<h1>Design & Build</h1>
+			<h1 class="animate__animated animate__fadeIn animate__slow">Design & Build</h1>
 		</div>
 		<section class="p-6 pb-0 flex flex-col services-content">
-			<h2>Beautifully Crafted to Suit  Your Lifestyle</h3>
-			<p>
+			<h2 class="animate__animated animate__fadeInUp animate__slow">Beautifully Crafted to Suit  Your Lifestyle</h3>
+			<p class="animate__animated animate__fadeInUp animate__slow">
 				Welcome to Logan Brown Construction, where design and construction meet to create extraordinary spaces. With our expertise in the industry, we are dedicated to transforming your vision into reality. Whether it's crafting your dream home or bringing new life to a commercial space, we combine innovation, functionality, and exceptional craftsmanship to deliver outstanding results. Join us on a journey where imagination takes shape and dreams come true.
 			</p>
-			<h3>A Dedicated Approach</h2>
-			<p>
+			<h3 class="animate__animated animate__fadeIn animate__delay-2s">A Dedicated Approach</h2>
+			<p class="animate__animated animate__fadeIn animate__delay-2s">
                 At Logan Brown Construction, we believe that great design and flawless execution go hand in hand. Our approach is rooted in collaboration, ensuring that your unique preferences and aspirations are at the forefront of every decision. We work closely with you, listening attentively to your needs, and blending our expertise with your vision. By harmonizing creativity, practicality, and attention to detail, we create spaces that reflect your personality, exceed your expectations, and stand the test of time.
             </p>
 		</section>
