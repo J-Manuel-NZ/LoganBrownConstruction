@@ -16,7 +16,7 @@ const Testimonial = () => {
         {name: 'Taika Waititi', review: 'I recently had the pleasure of working with Logan and his team on a construction project, and I could not be happier with the results. From the moment I contacted them, their team displayed the utmost professionalism and dedication to their craft.'}
     ]
   return (
-    <div className='animate__animated animate__fadeInUp'>
+    <div className='testimonial animate__animated animate__fadeInUp'>
       <Swiper
       style={{
         "--swiper-pagination-bullet-inactive-color": "rgba(232,241,242,.5)",

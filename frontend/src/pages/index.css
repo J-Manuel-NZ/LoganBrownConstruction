@@ -21,6 +21,7 @@
         shadow-md p-2 px-3 text-xl font-bold tracking-tight
         hover:opacity-90 active:opacity-80 transition-all
         md:text-3xl 
+        lg:my-12 lg:text-4xl lg:p-3
     }
     .dark_button {
         @apply bg-darkBlue text-accentGreen font-serif 
@@ -38,34 +39,42 @@
         @apply flex items-center justify-center text-whiteBlue 
         font-serif text-[40px]
         md:text-5xl md:p-6
+        lg:text-6xl lg:p-10
     }
     .section-title-light  {
         @apply flex items-center justify-center text-darkBlue bg-whiteBlue 
         font-serif text-[40px]
         md:text-5xl md:p-6
+        lg:text-6xl lg:p-10
     }
     .line {
         @apply h-[1px] bg-whiteBlue w-full mt-6
     }
     /* NAVBAR STYLES */
     .navbar {
-        @apply flex justify-between relative items-start pb-5
+        @apply flex justify-between relative items-start pb-5 z-10
+        lg:items-center lg:pt-6 lg:px-12 lg:bg-darkBlue lg:bg-opacity-95
+    }
+    /* Large screen styles */
+    .navbar-bar {
+        @apply flex flex-row flex-wrap
+         items-center justify-end gap-8
     }
     .navbar img {
-        @apply h-12 w-auto z-10 mt-6 ml-6
+        @apply h-12 w-auto mt-6 ml-6 lg:mt-0 lg:ml-0
     }
     .navbar-icon {
         @apply h-10 w-10 text-whiteBlue right-3 absolute z-20 mt-6 mr-6
-        cursor-pointer
+        cursor-pointer lg:hidden 
     }
 
     .navbar-menu {
         @apply flex flex-col h-[100vh] bg-darkBlue bg-opacity-95 w-full
-         z-10 fixed
+         fixed
          items-center justify-start gap-5 pt-16
     }
     .navbar-menu_item {
-        @apply text-whiteBlue font-serif text-4xl tracking-widest
+        @apply text-whiteBlue font-serif text-4xl lg:text-2xl tracking-widest
         hover:text-accentGreen hover:opacity-50
     }
     
@@ -80,7 +89,7 @@
         @apply relative h-screen bg-no-repeat left-0 -mt-28 bg-hero_image bg-cover
     }
     .hero-section_content {
-        @apply absolute bottom-6 p-12
+        @apply absolute bottom-6 p-12 lg:bottom-20 lg:left-20
     } 
     .hero-section_content h1,
     .hero-section_content h2 {
@@ -100,17 +109,21 @@
     }
 
     /* TESTIMONIAL SECTION STYLES */
+    .testimonial {
+        @apply lg:my-6
+    }
     
     .testimonial-review {
         @apply text-whiteBlue text-xs mx-12 mt-6 mb-0 font-sans 
         font-normal text-justify pt-3
         md:text-xl md:px-20 md:pt-6
+        lg:text-2xl lg:px-96
     }
 
     .testimonial-name {
         @apply text-whiteBlue text-sm mx-20 my-3 mb-9 font-sans 
         font-normal text-end    
-        md:text-2xl  
+        md:text-2xl  lg:text-3xl lg:text-center
     }
 
     /* SERVICES SECTION */
@@ -118,9 +131,14 @@
     .services {
         @apply flex flex-col justify-center items-center
     }
+    .services-info {
+        @apply flex flex-col justify-center items-center bg-whiteBlue shadow-inner py-6
+        lg:flex-row lg:p-12
+    }
 
     .services-infoblock {
-        @apply flex flex-col items-center justify-center px-16 p-3 text-justify
+        @apply flex flex-col items-center justify-center px-16 p-3 text-justify rounded-xl
+        hover:bg-whiteSmoke transition-all
     }
 
     .services-infoblock h3 {
@@ -131,6 +149,7 @@
     .services-infoblock p {
         @apply text-xs font-medium leading-tight
         md:text-lg md:px-40 md:py-1
+        lg:px-0
     }
 
     .services-infoblock_icon {
@@ -142,22 +161,22 @@
 
     .contact {
         @apply my-9 px-10 font-serif text-whiteBlue flex flex-col 
-        items-center text-center justify-center
+        items-center text-center justify-center lg:p-12
         
     }
 
     .contact h2 {
         @apply text-xl leading-tight tracking-tight font-semibold font-serif
-        md:text-2xl
+        md:text-2xl lg:text-3xl
     }
     .contact a {
         @apply text-[40px] text-accentGreen tracking-tight font-semibold font-numbers
-        md:text-5xl md:py-3
+        md:text-5xl md:py-3 cursor-pointer hover:text-accentGreen hover:opacity-80 transition-all
     }
     .contact p,
     .contact p a {
         @apply text-xs tracking-tight font-semibold font-serif text-whiteBlue
-        md:text-xl
+        md:text-xl lg:text-2xl
     }
 
     /* RECENT PROJECT SECTION STYLES */
@@ -175,7 +194,8 @@
     /* ABOUT SECTION STYLES */
     .about {
         @apply p-6 pt-9 flex flex-col items-start w-full justify-between 
-        md:flex-col md:items-center
+        md:flex-col md:items-center 
+        lg:items-start lg:py-20 lg:px-48 lg:justify-around
         
     }
 
@@ -192,34 +212,43 @@
         md:text-lg
     }
     .about-content {
-        @apply flex items-start justify-between gap-3
+        @apply flex items-start justify-between gap-3 flex-col
         md:flex-col md:items-center
+        lg:flex-row  lg:items-start  
     }
     .about-content p {
         @apply font-sans text-whiteBlue text-xs tracking-wider
-        w-3/5 leading-4 font-light text-justify
+         leading-4 font-light text-justify
         md:text-xl md:w-full md:px-24 md:pt-2 md:pb-4
+        lg:p-0 lg:w-3/5
     }
     .about img {
-        @apply aspect-square h-auto items-center w-2/5
-        md:w-1/3
+        @apply aspect-square h-auto items-center self-center
+        md:w-1/3 md:m-0
+        lg:-m-20 lg:h-[300px] lg:w-[300px] 
     }
     /* FOOTER STYLES */
 
     .footer {
         @apply p-6 flex flex-col
-        gap-3
+        gap-3 lg:items-center lg:gap-6 lg:mt-40 
+        
     }
 
     .footer-links  {
         @apply flex flex-col gap-3 text-whiteBlue 
+        lg:flex-row
+        lg:justify-between
+        
     }
     .footer-links img {
         @apply w-3/5 mb-3 
+        lg:w-1/5 lg:h-1/2
     }
     .footer-links h3 {
         @apply font-sans text-base tracking-wider font-semibold mb-1
         md:text-2xl md:mb-1
+        lg:text-xl
     }
     .footer-links_contact {
         @apply mb-3
@@ -227,10 +256,12 @@
     .footer-links_contact li:first-of-type {
         @apply text-base font-numbers underline
         md:text-xl
+        lg:text-lg
     }
     .footer-links_contact li {
         @apply text-xs font-serif flex items-center gap-3
         md:text-xl md:my-1
+        lg:text-lg
     }
     .footer-icon {
         @apply h-6
@@ -250,6 +281,7 @@
     .footer-legal {
         @apply text-whiteBlue font-serif text-[10px] tracking-tight mt-2 font-extralight
         md:text-lg
+        lg:text-base lg:text-center
     }
 
 /* ----------------------------------------------------------------------------- */
@@ -396,14 +428,18 @@
 
     .services-content {
         @apply text-whiteBlue font-sans text-justify
+        p-6 pb-0 flex flex-col
+        lg:w-[998px] m-auto
     }
     .services-content h2,
     .services-content h3 {
         @apply font-serif text-left text-2xl 
         font-semibold tracking-wider leading-6 mb-3
+        lg:text-3xl
     }
     .services-content p {
         @apply text-sm font-normal mb-6
+        lg:text-xl lg:leading-8
     }
 
     .services-content ul {
@@ -414,21 +450,26 @@
     .step-block {
         @apply flex flex-col items-center justify-center
         text-whiteBlue shadow-xl p-5 rounded-xl
+        lg:w-[800px] lg:m-auto lg:p-32 lg:pt-16 
     }
     .step-block :first-child {
         @apply h-12 w-12
+        lg:h-24 lg:w-24
     }
     .step-block h3 {
         @apply font-serif text-xl font-semibold tracking-wider my-3
+        lg:text-3xl
     }
     .step-block p {
         @apply font-sans text-sm font-normal text-justify
+        lg:text-xl lg:leading-8
     }
 
     /* ABOUT PAGE SPECIFIC STYLES */
 
     .about-mtb {
         @apply flex items-center mb-3 justify-center
+        lg:justify-center lg:w-full
     }
     .about-mtb img {
         @apply w-1/4
@@ -436,17 +477,21 @@
 
     .about-mtb_title {
         @apply flex flex-col ml-3
+
     }
 
     .about-mtb_title h2 {
         @apply font-serif text-[32px] tracking-wider font-semibold
         w-full mb-1
+        lg:text-6xl
     }
     .about-mtb_title h3 {
         @apply font-sans text-xl tracking-wider mb-0
+        lg:text-3xl
     }
     .about-mtb_title h4 {
         @apply font-sans italic text-[11px] opacity-50 tracking-wider
+        lg:text-xl
     }
 
     /* PROJECT CARD STYLES */

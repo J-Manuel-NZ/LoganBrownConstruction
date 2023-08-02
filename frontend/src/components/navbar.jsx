@@ -15,6 +15,45 @@ const Navbar = ({page}) => {
     // **
       <div className="navbar">
         <a href='/'><img src={logo} alt="Logan Brown Construction Logo" /></a>
+
+        <ul className="navbar-bar hidden lg:flex animate__animated animate__fadeInDown" onClick={() => setIsMenuOpen(false)}>
+                {page === 'home'
+                ? <li className='navbar-menu_item menu-active'><a href='/'>Home</a></li>
+                : <li className='navbar-menu_item'><a href='/'>Home</a></li>
+                }
+                {page === 'd&b'
+                ? <li className='navbar-menu_item menu-active'><a href='/design&build'>Design & Build</a></li>
+                : <li className='navbar-menu_item'><a href='/design&build'>Design & Build</a></li>
+                }
+                {page === 'renovations'
+                ? <li className='navbar-menu_item menu-active'><a href='/renovations'>Renovations</a></li>
+                : <li className='navbar-menu_item'><a href='/renovations'>Renovations</a></li>
+                }
+                {page === 'landscaping'
+                ? <li className='navbar-menu_item menu-active'><a href='/landscaping'>Landscaping</a></li>
+                : <li className='navbar-menu_item'><a href='/landscaping'>Landscaping</a></li>
+                }
+                {page === 'recentwork'
+                ? <li className='navbar-menu_item menu-active'><a href='/recentwork'>Recent Work</a></li>
+                : <li className='navbar-menu_item'><a href='/recentwork'>Recent Work</a></li>
+                }
+                {page === 'about'
+                ? <li className='navbar-menu_item menu-active'><a href='/about'>About</a></li>
+                : <li className='navbar-menu_item'><a href='/about'>About</a></li>
+                }
+                {page === 'contact'
+                ? <li className='navbar-menu_item menu-active'><a href='/contact'>Contact</a></li>
+                : <li className='navbar-menu_item'><a href='/contact'>Contact</a></li>
+                }
+                  
+                  {/* <li className='navbar-menu_item'><a href='/design&build'>Design & Build</a></li>
+                  <li className='navbar-menu_item'><a href='/renovations'>Renovations</a></li>
+                  <li className='navbar-menu_item'><a href='/landscaping'>Landscaping</a></li>
+                  <li className='navbar-menu_item'><a href='/recentwork'>Recent Work</a></li>
+                  <li className='navbar-menu_item'><a href='/about'>About</a></li>
+                  <li className='navbar-menu_item'><a href='/contact'>Contact</a></li> */}
+              </ul>
+
           {isMenuOpen ? (
               <FontAwesomeIcon
                   icon={faXmark}
