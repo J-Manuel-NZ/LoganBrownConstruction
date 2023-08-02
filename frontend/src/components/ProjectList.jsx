@@ -15,6 +15,7 @@ const ProjectList = ( { count, articles, home } ) => {
             article={article.article}
             image={article.images[0].image1}
             alt={article.images[0].alt1}
+            slug={article.slug}
             />
             : null
         ))}

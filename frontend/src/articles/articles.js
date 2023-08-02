@@ -21,7 +21,7 @@
 
 const articles = [
     {
-        slug:'recentwork/westmorland-rathroom-renovation',
+        slug:'recentwork/westmorland-bathroom-renovation',
         title:'Westmorland Bathroom Renovation',
         date:'22nd of March, 2022',
         description:'See how we crafted this luxurious bathroom renovation for an amazing client in Westmorland.',
