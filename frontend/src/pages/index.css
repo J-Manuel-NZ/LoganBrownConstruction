@@ -28,6 +28,8 @@
         shadow-md p-2 px-3 text-xl font-light tracking-tight
         hover:bg-step2 active:opacity-80 transition-all
         md:text-3xl
+        lg:my-12 lg:text-4xl lg:p-3
+    
     }
     .see_all {
         @apply bg-darkBlue text-whiteBlue font-serif
@@ -89,7 +91,7 @@
         @apply relative h-screen bg-no-repeat left-0 -mt-28 bg-hero_image bg-cover
     }
     .hero-section_content {
-        @apply absolute bottom-6 p-12 lg:bottom-20 lg:left-20
+        @apply absolute bottom-6 p-12 lg:bottom-36 lg:left-52
     } 
     .hero-section_content h1,
     .hero-section_content h2 {

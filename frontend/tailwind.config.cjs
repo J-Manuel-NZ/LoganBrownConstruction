@@ -20,7 +20,7 @@ module.exports = {
 			step6: '#7094C8',
 		},
 		backgroundImage: {
-			'hero_image' : "url('/public/assets/hero_img.png')"
+			'hero_image' : "url('/public/assets/entryway2.jpg')"
 		}
 		
 	},

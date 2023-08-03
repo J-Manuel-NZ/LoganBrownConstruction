@@ -2,7 +2,7 @@ import '../pages/index.css'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBars} from '@fortawesome/free-solid-svg-icons'
-import logo from '../../public/assets/lbc_logo.jpg'
+import logo from '../../public/assets/lbc_logo.png'
 import '../../node_modules/animate.css/animate.css'
 
 const Navbar = ({page}) => {
