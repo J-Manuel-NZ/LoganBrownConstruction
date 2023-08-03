@@ -1,6 +1,6 @@
 // Add new articles here as a new object within the array
 // Include - Title, Date, Images, Alt Text, Description and Full Article 
-// Add new articels at the top in order to keep the order correct
+// Add new articles at the top in order to keep the order correct in Project list
 
 // Use this template:
 // title:'',

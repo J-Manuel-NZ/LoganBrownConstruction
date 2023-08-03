@@ -10,12 +10,12 @@ import '../../node_modules/animate.css/animate.css'
 // Change this to accept an array of objects as a prop in order to construct the slideshow
     // The idea is to use this component as a base to construct ALL slideshows by 
     // passing the images as a prop when needed
-const images = [
+
+    const images = [
         {image: '../../public/assets/hero_img.png', alt: 'picture 1'},
         {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
 ];
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -39,7 +39,7 @@ const images = [
                 We believe that great design and flawless execution go hand in hand. Our approach is rooted in collaboration, ensuring that your unique preferences and aspirations are at the forefront of every decision. We work closely with you, listening attentively to your needs, and blending our expertise with your vision. By harmonizing creativity, practicality, and attention to detail, we create spaces that reflect your personality, exceed your expectations, and stand the test of time.
             </p>
 		</section>
-
+ 
 		<ImageSlider client:load images={images} />
 
 		<section class="p-6 flex flex-col items-center services-content">

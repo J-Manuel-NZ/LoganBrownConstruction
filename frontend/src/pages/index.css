@@ -42,7 +42,7 @@
         lg:text-6xl lg:p-10
     }
     .section-title-light  {
-        @apply flex items-center justify-center text-darkBlue bg-whiteBlue 
+        @apply flex items-center justify-center text-darkBlue bg-whiteBlue text-center
         font-serif text-[40px]
         md:text-5xl md:p-6
         lg:text-6xl lg:p-10
@@ -543,4 +543,34 @@
     .contact-form_sent p {
         @apply text-base font-serif -m-3
     }
+
+    /* ARTICLE PAGE STYLES */
+
+    .article-page_section {
+        @apply flex flex-col p-6 text-whiteBlue
+        md:px-20
+        lg:px-32
+    }
+
+    .article-page_section-heading {
+        @apply flex items-end mb-3
+    }
+    .article-page_section-heading h1 {
+        @apply font-semibold flex-1
+        md:text-2xl
+        lg:text-3xl
+    }
+    .article-page_section-heading p {
+        @apply text-xs opacity-50
+        md:text-base
+        lg:text-lg
+    }
+
+    .article-page_section-article {
+        @apply text-sm leading-6 text-justify
+        md:text-lg
+        lg:text-xl lg:leading-8
+    }
+
+
 }

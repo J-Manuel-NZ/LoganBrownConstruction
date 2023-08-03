@@ -6,30 +6,34 @@ import ImageSlider from '../../components/ImageSlider.jsx'
 import ProjectList from '../../components/ProjectList';
 import articles from '../../articles/articles';
 import '../../../node_modules/animate.css/animate.css'
-import load from 'astro-icon/lib/utils';
+
 const article = articles[0]
+const images = [
+        {image: '../../public/assets/article_images/image1.png', alt: 'picture 1'},
+        {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
+];
 ---
 
 <html lang="en">
 	<head>
-		<meta charSet="utf-8" />
+		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Logan Brown Construction | Contact Us</title>
-        <!-- <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-            (function(){
-                emailjs.init("YOUR_PUBLIC_KEY");
-        })(); -->
-<!-- </script> -->
 	</head>
 	<body class="bg-darkBlue flex flex-col">
         <Navbar page='recentwork' client:load />
-		<div class="section-title-light ">
-            <h1>{article.title}</h1>
-		</div>
+        <ImageSlider client:load images={images} />
+        <article class="article-page_section">
+            <div class="article-page_section-heading">
+                <h1>{article.title}</h1>
+                <p>{article.date}</p>
+            </div>
+            <p class="article-page_section-article">{article.article}</p>
+            <div class="mt-4">
+                <a href="/recentwork"><button class="light_button">Return to all articles</button></a>
+            </div>
+        </article>
         <Footer />
     </body>
