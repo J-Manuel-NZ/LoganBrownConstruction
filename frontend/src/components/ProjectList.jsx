@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard'
 
 const ProjectList = ( { count, articles, home } ) => {
     const [counter, setCounter] = useState(count)
+
   return (
     <div className='project-list'> 
         {articles.map((article, index) => ( 
@@ -18,7 +19,7 @@ const ProjectList = ( { count, articles, home } ) => {
             slug={article.slug}
             />
             : null
-        ))}
+          ))}
         {home ? 
         <div className='project-list_button-container'>
           <a href='/recentwork'><button className='see_all'>See All</button></a> 
@@ -30,6 +31,7 @@ const ProjectList = ( { count, articles, home } ) => {
         </div>
         }
     </div>
+    
   )
 }
 

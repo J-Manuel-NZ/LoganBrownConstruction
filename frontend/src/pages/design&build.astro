@@ -12,8 +12,11 @@ import '../../node_modules/animate.css/animate.css'
     // passing the images as a prop when needed
 
     const images = [
-        {image: '../../public/assets/hero_img.png', alt: 'picture 1'},
-        {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
+        {image: '../public/assets/D&B/main_entrance.jpg', alt: 'picture 1'},
+        {image: '../public/assets/D&B/entryway_hallway.jpg', alt: 'picture 2'},
+        {image: '../public/assets/D&B/master_bath.jpg', alt: 'picture 3'},
+        {image: '../public/assets/D&B/kitchen.jpg', alt: 'picture 4'},
+        {image: '../public/assets/D&B/bathroom_vanity_mirror.jpg', alt: 'picture 5'},
 ];
 ---
 <html lang="en">
@@ -39,8 +42,7 @@ import '../../node_modules/animate.css/animate.css'
                 We believe that great design and flawless execution go hand in hand. Our approach is rooted in collaboration, ensuring that your unique preferences and aspirations are at the forefront of every decision. We work closely with you, listening attentively to your needs, and blending our expertise with your vision. By harmonizing creativity, practicality, and attention to detail, we create spaces that reflect your personality, exceed your expectations, and stand the test of time.
             </p>
 		</section>
- 
-		<ImageSlider client:load images={images} />
+            <ImageSlider client:load images={images} />
 
 		<section class="p-6 flex flex-col items-center services-content">
             <h3>Our Collaborative Process</h2>
@@ -99,7 +101,9 @@ import '../../node_modules/animate.css/animate.css'
 			<div class="line"></div>
 		</section>
 		<section>
+            {articles[0] ?
             <ProjectList client:load count={2} articles={articles} home={false} />
+            : null }
 		</section>
         <Footer />
     </body>

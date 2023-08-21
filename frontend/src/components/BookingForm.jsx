@@ -52,8 +52,7 @@ const BookingForm = () => {
             onSubmit={sendEmail}>
 
                 <label htmlFor='name'>name</label>    
-                <input type="text" id='name'
-                pattern="[A-Za-z]{1,50}" maxLength={50}
+                <input type="text" id='name' maxLength={50}
                 name='user_name' required />
 
                 <label htmlFor='email'>email</label>

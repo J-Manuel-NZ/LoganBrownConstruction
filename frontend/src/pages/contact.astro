@@ -37,7 +37,9 @@ import '../../node_modules/animate.css/animate.css'
 			<BookingForm client:load/>
 		</section>
 		<section>
-			<ProjectList client:load count={2} articles={articles} home={false} />
+			{articles[0] ?
+				<ProjectList client:load count={2} articles={articles} home={false} />
+				: null }
 		</section>
         <Footer />
     </body>

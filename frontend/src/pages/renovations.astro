@@ -13,9 +13,12 @@ import '../../node_modules/animate.css/animate.css'
  // Change this to accept an array of objects as a prop in order to construct the slideshow
     // The idea is to use this component as a base to construct ALL slideshows by 
     // passing the images as a prop when needed
-const images = [
-        {image: '../../public/assets/hero_img.png', alt: 'picture 1'},
-        {image: '../../public/assets/secondary_img.png', alt: 'picture 2'}
+	const images = [
+        {image: '../public/assets/Renovation/wardrobe_2.jpg', alt: 'picture 1'},
+        {image: '../public/assets/Renovation/feature_wall.jpg', alt: 'picture 2'},
+        {image: '../public/assets/Renovation/fusebox_cover_2.jpg', alt: 'picture 3'},
+        {image: '../public/assets/Renovation/porch_2.png', alt: 'picture 4'},
+        {image: '../public/assets/Renovation/porch_1.png', alt: 'picture 5'},
 ];
 ---
 
@@ -64,7 +67,9 @@ const images = [
 			<div class="line"></div>
 		</section>
 		<section>
-			<ProjectList client:load count={2} articles={articles} home={false} />
+			{articles[0] ?
+				<ProjectList client:load count={2} articles={articles} home={false} />
+				: null }
 		</section>
         <Footer />
     </body>

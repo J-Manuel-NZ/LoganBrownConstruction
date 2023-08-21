@@ -23,11 +23,13 @@ const ImageSlider = ({ images }) => {
           "--swiper-navigation-size": "16px",
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
+        spaceBetween={8}
         slidesPerView={1}
+        navigation
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+
       >
         {imageArray.map((image) => (
           <SwiperSlide key={image.alt}>

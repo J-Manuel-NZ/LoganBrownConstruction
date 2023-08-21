@@ -80,10 +80,15 @@ import '../../node_modules/animate.css/animate.css'
 		<!-- Recent Project Section -->
 		<section class="projects">
 			<div class="section-title-light">
+				{articles[0] ?
 				<h2>Recent Projects</h2>
+				: <h2>Stay tuned, <br>our gallery is coming soon!</h2>
+				}
 			</div>
 			<div class="projects-container">
+				{articles[0] ?
 				<ProjectList client:load count={1} articles={articles} home={true} />
+				: null }
 			</div>
 		</section>
 

@@ -11,9 +11,8 @@ import '../../node_modules/animate.css/animate.css'
 
 const Testimonial = () => {
     const testimonials = [
-        {name: 'Justin Manuel', review: 'I recently had the pleasure of working with Logan and his team on a construction project, and I could not be happier with the results. From the moment I contacted them, their team displayed the utmost professionalism and dedication to their craft.'},
-        {name: 'Richie McCaw', review: 'I recently had the pleasure of working with Logan and his team on a construction project, and I could not be happier with the results. From the moment I contacted them, their team displayed the utmost professionalism and dedication to their craft.'},
-        {name: 'Taika Waititi', review: 'I recently had the pleasure of working with Logan and his team on a construction project, and I could not be happier with the results. From the moment I contacted them, their team displayed the utmost professionalism and dedication to their craft.'}
+        {name: 'Nic, Christchurch', review: "Logan is a real craftsman of a builder. He has an exceptional eye for detailing and always delivers quality outcomes and finishes. We have contracted him to build numerous projects around the house over the last 5-years, including bespoke outdoor furniture. He is a super friendly and easy-going guy and provides very good value for money. We would definitely recommend him!"},
+        {name: 'Kelly Petrie', review: "What a wonderful experience to finally have a contractor out that takes pride in his work and your home. I had Logan Brown Construction out to quote for some trim to tidy up my kitchen area, the quote was itemised efficiently and easy to understand. Great job completed with clean up. Was so happy with the end result that had him back out to paint and gib a sleepout.I have recommended him to my friends and family, I wouldn't have done so if I wasn't sure they would be as satisfied with the results too."},
     ]
   return (
     <div className='testimonial animate__animated animate__fadeInUp'>
