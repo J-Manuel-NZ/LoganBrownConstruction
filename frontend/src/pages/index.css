@@ -447,6 +447,9 @@
     .services-content ul {
         @apply decoration-auto text-left text-base font-medium list-disc px-6
     }
+    .services-content li {
+        @apply text-xl leading-8 font-normal 
+    }
 
     /* DESIGN AND BUILD SPECIFIC STYLES */
     .step-block {
@@ -455,7 +458,7 @@
         lg:w-[800px] lg:m-auto lg:p-32 lg:pt-16 
     }
     .step-block :first-child {
-        @apply h-12 w-12
+        @apply h-12 w-12 
         lg:h-24 lg:w-24
     }
     .step-block h3 {
