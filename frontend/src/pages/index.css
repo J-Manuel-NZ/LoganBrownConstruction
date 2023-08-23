@@ -397,7 +397,7 @@
     #option-2:checked:checked ~ .option-2,
     #option-3:checked:checked ~ .option-3,
     #option-4:checked:checked ~ .option-4{
-    border-color: #161D27;
+    border-color: #E8F1F2;
     background: #E8F1F2;
     }
     #option-1:checked:checked ~ .option-1 .dot,
