@@ -440,7 +440,7 @@
         lg:text-3xl
     }
     .services-content p {
-        @apply text-sm font-normal mb-6
+        @apply text-base font-normal mb-6
         lg:text-xl lg:leading-8
     }
 
@@ -448,7 +448,7 @@
         @apply decoration-auto text-left text-base font-medium list-disc px-6
     }
     .services-content li {
-        @apply text-xl leading-8 font-normal 
+        @apply text-lg leading-8 font-normal lg:text-xl
     }
 
     /* DESIGN AND BUILD SPECIFIC STYLES */

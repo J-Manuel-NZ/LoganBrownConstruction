@@ -3,12 +3,9 @@ import './index.css'
 import Footer from '../components/footer.astro';
 import Navbar from '../components/navbar';
 import ImageSlider from '../components/ImageSlider.jsx'
-import Testimonial from '../components/testimonial.jsx'
 import ProjectList from '../components/ProjectList';
 import articles from '../articles/articles';
 // These will become null and void once the logic is implemented below
-import image1 from '../../public/assets/hero_img.png'
-import image2 from '../../public/assets/secondary_img.png'
 import '../../node_modules/animate.css/animate.css'
  // Change this to accept an array of objects as a prop in order to construct the slideshow
     // The idea is to use this component as a base to construct ALL slideshows by 
@@ -17,7 +14,7 @@ import '../../node_modules/animate.css/animate.css'
 		{image: '../assets/Renovation/wardrobe_2.jpg', alt: 'Wardrobe'},
         {image: '../assets/Renovation/feature_wall.jpg', alt: 'Feature Wall'},
         {image: '../assets/Renovation/fusebox_cover_2.jpg', alt: 'Custome Fusebox Cover'},
-        {image: '../assets/Renovation/porch_1.jpg', alt: 'Renovated Porch'},
+        {image: '../assets/Renovation/porch_2.png', alt: 'Renovated Porch'},
 ];
 ---
 
@@ -27,7 +24,7 @@ import '../../node_modules/animate.css/animate.css'
 		<link rel="icon" type="image/svg+xml" href="/lbc_logo.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="High-end construction service based in Christchurch, New Zealand. Specialising in new builds, renovations and landscaping projects."/>
+		<meta name="description" content="No job too big or small! We are experts at renovating old spaces to give them a completely refreshed look."/>
 		<meta name="keywords" content="Logan Brown, Logan Brown Construction, Christchurch, Builders, Building, Canterbury, Service, Building Company, Renovations" />
 		<title>Logan Brown Construction | Renovations</title>
 	</head>
