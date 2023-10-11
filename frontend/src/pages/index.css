@@ -98,11 +98,11 @@
         @apply font-serif text-whiteBlue
     }
 
-    .hero-section_content h1 {
+    .hero-section_content h2 {
         @apply text-4xl font-extrabold tracking-tighter leading-none w-2/3
         md:text-6xl
     }
-    .hero-section_content h2 {
+    .hero-section_content h1 {
         @apply text-xl font-normal leading-none mt-3
         md:text-2xl md:w-3/5
     }
