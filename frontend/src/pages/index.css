@@ -21,14 +21,14 @@
         shadow-md p-2 px-3 text-xl font-bold tracking-tight
         hover:opacity-90 active:opacity-80 transition-all
         md:text-3xl 
-        lg:my-12 lg:text-4xl lg:p-3
+        lg:text-2xl lg:p-3
     }
     .dark_button {
         @apply bg-darkBlue text-accentGreen font-serif 
         shadow-md p-2 px-3 text-xl font-light tracking-tight
         hover:bg-step2 active:opacity-80 transition-all
         md:text-3xl
-        lg:my-12 lg:text-4xl lg:p-3
+        lg:text-2xl lg:p-3
     
     }
     .see_all {
@@ -41,20 +41,20 @@
         @apply flex items-center justify-center text-whiteBlue 
         font-serif text-[40px]
         md:text-5xl md:p-6
-        lg:text-6xl lg:p-10
+        lg:text-5xl lg:p-10
     }
     .section-title-light  {
         @apply flex items-center justify-center text-darkBlue bg-whiteBlue text-center
         font-serif text-[40px]
         md:text-5xl md:p-6
-        lg:text-6xl lg:p-10
+        lg:text-5xl lg:p-10
     }
     .line {
         @apply h-[1px] bg-whiteBlue w-full mt-6
     }
     /* NAVBAR STYLES */
     .navbar {
-        @apply flex justify-between relative items-start pb-5 z-10
+        @apply flex relative pb-5 z-10 w-full max-w-6xl justify-between
         lg:items-center lg:pt-6 lg:px-12 lg:bg-darkBlue lg:bg-opacity-95
     }
     /* Large screen styles */
@@ -66,7 +66,7 @@
         @apply h-12 w-auto mt-6 ml-6 lg:mt-0 lg:ml-0
     }
     .navbar-icon {
-        @apply h-10 w-10 text-whiteBlue right-3 absolute z-20 mt-6 mr-6
+        @apply h-8 w-8 text-whiteBlue right-3 absolute z-20 mt-6 mr-6
         cursor-pointer lg:hidden 
     }
 
@@ -76,7 +76,7 @@
          items-center justify-start gap-5 pt-16
     }
     .navbar-menu_item {
-        @apply text-whiteBlue font-serif text-4xl lg:text-2xl tracking-widest
+        @apply text-whiteBlue font-serif text-xl lg:text-lg tracking-widest
         hover:text-accentGreen hover:opacity-50
     }
     
@@ -88,10 +88,10 @@
 /* HERO SECTION STYLES */
 
     .hero-section {
-        @apply relative h-screen bg-no-repeat left-0 -mt-28 bg-hero_image bg-cover bg-center
+        @apply h-screen bg-no-repeat left-0 -mt-28 bg-hero_image bg-cover bg-center justify-center items-center
     }
     .hero-section_content {
-        @apply absolute bottom-6 p-12 lg:bottom-36 lg:left-52
+        @apply absolute bottom-6 p-6 lg:pl-0 lg:max-w-6xl lg:m-auto
     } 
     .hero-section_content h1,
     .hero-section_content h2 {
@@ -99,33 +99,33 @@
     }
 
     .hero-section_content h2 {
-        @apply text-4xl font-extrabold tracking-tighter leading-none w-2/3
-        md:text-6xl
+        @apply text-4xl font-extrabold tracking-tight leading-none w-2/3
+        md:text-5xl
     }
     .hero-section_content h1 {
-        @apply text-xl font-normal leading-none mt-3
-        md:text-2xl md:w-3/5
+        @apply text-lg font-normal leading-none mt-3
+        md:text-xl md:w-3/5
     }
     .hero-section_buttons {
-        @apply flex gap-4 mt-6
+        @apply flex gap-4 mt-6 mb-12
     }
 
     /* TESTIMONIAL SECTION STYLES */
     .testimonial {
-        @apply lg:my-6
+        @apply lg:my-6 lg:w-full p-6
     }
     
     .testimonial-review {
-        @apply text-whiteBlue text-xs mx-12 mt-6 mb-0 font-sans 
+        @apply text-whiteBlue text-xs mt-6 mb-0 font-sans 
         font-normal text-justify pt-3
-        md:text-xl md:px-20 md:pt-6
-        lg:text-2xl lg:px-56
+        md:text-lg md:pt-6
+        lg:text-lg 
     }
 
     .testimonial-name {
-        @apply text-whiteBlue text-sm mx-20 my-3 mb-9 font-sans 
+        @apply text-whiteBlue text-sm my-3 mb-9 font-sans 
         font-normal text-end    
-        md:text-2xl  lg:text-3xl lg:text-center
+        md:text-xl  lg:text-xl lg:text-center
     }
 
     /* SERVICES SECTION */
@@ -134,7 +134,7 @@
         @apply flex flex-col justify-center items-center
     }
     .services-info {
-        @apply flex flex-col justify-center items-center bg-whiteBlue shadow-inner py-6
+        @apply flex flex-col justify-center items-center bg-whiteBlue shadow-inner py-6  w-full max-w-6xl m-auto
         lg:flex-row lg:p-12
     }
 
@@ -146,17 +146,17 @@
     .services-infoblock h3 {
         @apply font-semibold text-xl tracking-wider
         my-2 underline
-        md:text-3xl
+        md:text-xl
     }
     .services-infoblock p {
         @apply text-xs font-medium leading-tight
-        md:text-lg md:px-40 md:py-1
+        md:text-base md:px-40 md:py-1
         lg:px-0
     }
 
     .services-infoblock_icon {
         @apply text-darkBlue h-14 w-14
-        md:h-20 md:w-20
+        md:h-16 md:w-16
     }
 
     /* CONTACT SECTION STYLES */
@@ -183,7 +183,12 @@
 
     /* RECENT PROJECT SECTION STYLES */
     .projects {
-        @apply bg-whiteBlue pt-3
+        @apply bg-whiteBlue pt-3 max-w-6xl w-full m-auto
+    }
+    .projects h2 {
+        @apply text-center font-serif text-darkBlue text-4xl tracking-tight
+        md:text-5xl md:pt-6
+        lg:text-5xl
     }
     .projects-container h3 {
         @apply text-darkBlue font-serif text-5xl -mb-6   
@@ -195,9 +200,9 @@
 
     /* ABOUT SECTION STYLES */
     .about {
-        @apply p-6 pt-9 flex flex-col items-start w-full justify-between 
+        @apply p-6 pt-9 flex flex-col items-start w-full justify-between max-w-6xl m-auto 
         md:flex-col md:items-center 
-        lg:items-start lg:py-20 lg:px-48 lg:justify-around
+        lg:items-start lg:justify-around
         
     }
 
@@ -227,12 +232,12 @@
     .about img {
         @apply aspect-square h-auto items-center self-center
         md:w-1/3 md:m-0
-        lg:-m-20 lg:h-[300px] lg:w-[300px] 
+        lg:h-[300px] lg:w-[300px] 
     }
     /* FOOTER STYLES */
 
     .footer {
-        @apply p-6 flex flex-col
+        @apply p-6 flex flex-col max-w-6xl m-auto
         gap-3 lg:items-center lg:gap-6 lg:mt-40 
         
     }

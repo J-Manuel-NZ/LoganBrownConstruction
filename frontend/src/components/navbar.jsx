@@ -33,10 +33,10 @@ const Navbar = ({page}) => {
                 ? <li className='navbar-menu_item menu-active'><a href='/landscaping'>Landscaping</a></li>
                 : <li className='navbar-menu_item'><a href='/landscaping'>Landscaping</a></li>
                 }
-                {page === 'recentwork'
+                {/* {page === 'recentwork'
                 ? <li className='navbar-menu_item menu-active'><a href='/recentwork'>Recent Work</a></li>
                 : <li className='navbar-menu_item'><a href='/recentwork'>Recent Work</a></li>
-                }
+                } */}
                 {page === 'about'
                 ? <li className='navbar-menu_item menu-active'><a href='/about'>About</a></li>
                 : <li className='navbar-menu_item'><a href='/about'>About</a></li>

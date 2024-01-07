@@ -9,6 +9,24 @@ import profileImage from '../../public/assets/logan_brown_headshot.png'
 import ProjectList from '../components/ProjectList'
 import articles from '../articles/articles'
 import '../../node_modules/animate.css/animate.css'
+import ImageSlider from '../components/ImageSlider.jsx'
+
+const images = [
+        {image: '../assets/HomepageSlider/Deck3.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/lawn.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/decklawn.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/underdeck.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/slidingdoor.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/bathroom1.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/bathroom2.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/storage.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/fence.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/Deck.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/Deck2.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/gardensteps.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+        {image: '../assets/HomepageSlider/stepslawn.jpg', alt: 'New Kwila Deck by Ranch Slider'},
+];
+
 ---
 
 <html lang="en">
@@ -24,20 +42,26 @@ import '../../node_modules/animate.css/animate.css'
 	</head>
 	<body class="bg-darkBlue flex flex-col animate__animated scroll-smooth">
 		<!-- Navbar -->
-		<Navbar page='home' client:load />
+		<div class="w-full lg:bg-darkBlue z-10 justify-center flex">
+			<Navbar page='home' client:load />
+		</div>
 		<!-- Hero Section -->
 		<section class="hero-section">
-			<div class="hero-section_content">
-				<h2 class="animate__animated animate__fadeInUp animate__slow">Make your dream home a reality.</h2>
-				<h1 class="animate__animated animate__fadeInUp animate__delay-1s">Friendly and professional build specialists based in Christchurch</h1>
-				<div class="hero-section_buttons animate__animated animate__fadeInUp animate__delay-1s">
-					<a href="#services"><button class="light_button">Our Services</button></a>
-					<a href="/contact"><button class="dark_button">Get in Touch</button></a>
+			<div class="w-6xl w-full max-w-6xl m-auto z-30">
+				<div class="hero-section_content">
+					<h2 class="animate__animated animate__fadeInUp animate__slow">Make your dream home a reality.</h2>
+					<h1 class="animate__animated animate__fadeInUp animate__delay-1s">Friendly and professional build specialists based in Christchurch</h1>
+					<div class="hero-section_buttons animate__animated animate__fadeInUp animate__delay-1s">
+						<a href="#services"><button class="light_button">Our Services</button></a>
+						<a href="/contact"><button class="dark_button">Get in Touch</button></a>
+					</div>
 				</div>
 			</div>
 		</section>
 		<!-- Testimonial Section -->
-		<Testimonial client:load />
+		<section class="w-full max-w-6xl m-auto">
+			<Testimonial client:load />
+		</section>
 		<!-- Image or Slider of previous work -->
 		<img class="mt-9 md:h-[600px] md:w-auto object-cover object-top" src={buildingImage} alt="Finished high-end home by Logan Brown Construction">
 		<!-- Services Section -->
@@ -45,31 +69,33 @@ import '../../node_modules/animate.css/animate.css'
 			<div class="section-title">
 				<h2>Our Services</h2>
 			</div>
-			<div class="services-info">
-				<!-- <div class="services-infoblock"> -->
-					<!-- Icon -->
-					<a href="/design&build" class="services-infoblock">
-						<Icon name="mdi:pencil-ruler" class="services-infoblock_icon" />
-						<h3>Design & Build</h3>
-						<p>Turn your dreams into reality with our expert team. From design to finishing touches, we deliver quality craftsmanship and attention to detail. Let us build your custom home, tailored to your style and needs.</p>
-					</a>
-				<!-- </div> -->
-				<!-- <div class="services-infoblock"> -->
-					<!-- Icon -->
-					<a href="/renovations" class="services-infoblock">
-						<Icon name="jam:hammer" class="services-infoblock_icon" />
-						<h3>Renovations</h3>
-						<p>Transform your space with our professional renovation services. We bring creativity and expertise to every project, updating single rooms or your entire property. Experience a functional, stylish, and inviting home.</p>
-					</a>
-				<!-- </div> -->
-				<!-- <div class="services-infoblock"> -->
-					<!-- Icon -->
-					<a href="/landscaping" class="services-infoblock">
-						<Icon name="mdi:fountain" class="services-infoblock_icon" />
-						<h3>Landscaping</h3>
-						<p>Enhance your property's beauty and value with our comprehensive landscaping services. Our experts create captivating outdoor spaces, from lush gardens to stunning hardscapes. Enjoy a tranquil oasis or vibrant entertaining area.</p>
-					</a>
-				<!-- </div> -->
+			<div class="bg-whiteBlue w-full">
+				<div class="services-info">
+					<!-- <div class="services-infoblock"> -->
+						<!-- Icon -->
+						<a href="/design&build" class="services-infoblock">
+							<Icon name="mdi:pencil-ruler" class="services-infoblock_icon" />
+							<h3>Design & Build</h3>
+							<p>Turn your dreams into reality with our expert team. From design to finishing touches, we deliver quality craftsmanship and attention to detail. Let us build your custom home, tailored to your style and needs.</p>
+						</a>
+					<!-- </div> -->
+					<!-- <div class="services-infoblock"> -->
+						<!-- Icon -->
+						<a href="/renovations" class="services-infoblock">
+							<Icon name="jam:hammer" class="services-infoblock_icon" />
+							<h3>Renovations</h3>
+							<p>Transform your space with our professional renovation services. We bring creativity and expertise to every project, updating single rooms or your entire property. Experience a functional, stylish, and inviting home.</p>
+						</a>
+					<!-- </div> -->
+					<!-- <div class="services-infoblock"> -->
+						<!-- Icon -->
+						<a href="/landscaping" class="services-infoblock">
+							<Icon name="mdi:fountain" class="services-infoblock_icon" />
+							<h3>Landscaping</h3>
+							<p>Enhance your property's beauty and value with our comprehensive landscaping services. Our experts create captivating outdoor spaces, from lush gardens to stunning hardscapes. Enjoy a tranquil oasis or vibrant entertaining area.</p>
+						</a>
+					<!-- </div> -->
+				</div>
 			</div>
 		</section>
 		<!-- Contact Scetion -->
@@ -81,19 +107,19 @@ import '../../node_modules/animate.css/animate.css'
 			</p>
 		</section>
 		<!-- Recent Project Section -->
-		<section class="projects">
-			<div class="section-title-light">
-				{articles[0] ?
-				<h2>Recent Projects</h2>
-				: <h2>Stay tuned, <br>our gallery is coming soon!</h2>
-				}
+	<section class="w-full bg-whiteBlue">
+		<div class="projects">
+			<h2>Project Gallery</h2>
+			<div class="p-10">
+				<ImageSlider client:load images={images} />
 			</div>
-			<div class="projects-container">
+			<!-- <div class="projects-container">
 				{articles[0] ?
 				<ProjectList client:load count={1} articles={articles} home={true} />
 				: null }
-			</div>
-		</section>
+			</div> -->
+		</div>
+	</section>
 
 		<section class="about">
 			<div class="about-title">
